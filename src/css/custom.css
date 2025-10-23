@@ -1,0 +1,64 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #0078d4;
+  --ifm-color-primary-dark: #006cbe;
+  --ifm-color-primary-darker: #0066b3;
+  --ifm-color-primary-darkest: #005494;
+  --ifm-color-primary-light: #0084ea;
+  --ifm-color-primary-lighter: #008af5;
+  --ifm-color-primary-lightest: #1a9aff;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #4cc2ff;
+  --ifm-color-primary-dark: #2cb7ff;
+  --ifm-color-primary-darker: #1cb2ff;
+  --ifm-color-primary-darkest: #0095e9;
+  --ifm-color-primary-light: #6ccdff;
+  --ifm-color-primary-lighter: #7cd2ff;
+  --ifm-color-primary-lightest: #abe3ff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Custom styles for Windsurf documentation */
+.markdown h1 {
+  font-weight: 700;
+}
+
+.markdown h2 {
+  margin-top: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.markdown h3 {
+  margin-top: 1.5rem;
+}
+
+.markdown ul li,
+.markdown ol li {
+  margin: 0.5rem 0;
+}
+
+.markdown code {
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.markdown blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 4px 4px 0;
+}
