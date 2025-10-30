@@ -117,6 +117,14 @@ const config: Config = {
               label: 'GitHub',
               href: 'https://github.com/banlyslash/windsurf-playbook',
             },
+            {
+              label: 'Contributing',
+              to: '/CONTRIBUTING.md',
+            },
+            {
+              label: 'License',
+              to: '/LICENSE.md',
+            },
           ],
         },
       ],

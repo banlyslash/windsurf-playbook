@@ -64,3 +64,11 @@ The documentation content is sourced from markdown files in the `docs` directory
 1. Edit the markdown files in the `docs` directory
 2. The sidebar navigation is configured in `sidebars.ts`
 3. Site configuration is in `docusaurus.config.ts`
+
+## Contributing
+
+We welcome contributions to the Windsurf Playbook! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
