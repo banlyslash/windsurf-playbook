@@ -1,25 +1,23 @@
-yangshun:
-  name: Yangshun Tay
+sunhak:
+  name: Sunhak Hout
   title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
-  url: https://linkedin.com/in/yangshun
-  image_url: https://github.com/yangshun.png
+  url: https://linkedin.com/in/sunhak
+  image_url: https://github.com/sunhak.png
   page: true
   socials:
-    x: yangshunz
-    linkedin: yangshun
-    github: yangshun
-    newsletter: https://www.greatfrontend.com
+    x: sunhak
+    linkedin: sunhak
+    github: sunhak
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+banly:
+  name: Banly Tong
+  title: AI Engineer
+  url: https://banlytong.com
+  image_url: https://github.com/banlytong.png
   page:
     # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+    permalink: '/all-banly-tong-articles'
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    x: banlytong
+    linkedin: banlytong
+    github: banlytong

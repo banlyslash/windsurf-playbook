@@ -28,21 +28,32 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Core Features",
-      items: ["tab", "command", "cascade", "cascade-memories", "cascade-rules"],
+      items: [
+        "core-features/tab",
+        "core-features/command",
+        "core-features/cascade",
+        "core-features/cascade-memories",
+        "core-features/cascade-rules",
+      ],
     },
     {
       type: "category",
       label: "Model Selection",
       items: [
-        "model-selection",
-        "model-selection-coding",
-        "model-specialties-specialty",
+        "model-selection/model-selection-coding",
+        "model-selection/model-specialties-specialty",
       ],
     },
     {
       type: "category",
       label: "Productivity Tools",
-      items: ["workflows", "planning-mode", "at-mention-tools", "mcp"],
+      items: [
+        "productivity-tools/workflows",
+        "productivity-tools/planning-mode",
+        "productivity-tools/at-mention-tools",
+        "productivity-tools/web-search-guide",
+        "productivity-tools/mcp",
+      ],
     },
 
     "caution",
@@ -50,7 +61,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Challenges",
-      items: ["quiz", "quiz-mcq", "quiz-mcq-medium"],
+      items: ["challenges/quiz-mcq", "challenges/quiz-mcq-medium"],
     },
   ],
 };

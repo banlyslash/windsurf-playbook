@@ -22,8 +22,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'windsurf', // Usually your GitHub org/user name.
-  projectName: 'windsurf-docs', // Usually your repo name.
+  organizationName: 'banlyslash', // Usually your GitHub org/user name.
+  projectName: 'windsurf-playbook', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -88,7 +88,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/windsurf/windsurf-docs',
+          href: 'https://github.com/banlyslash/windsurf-playbook',
           label: 'GitHub',
           position: 'right',
         },
@@ -107,23 +107,6 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
           title: 'More',
           items: [
             {
@@ -132,12 +115,12 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/windsurf/windsurf-docs',
+              href: 'https://github.com/banlyslash/windsurf-playbook',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Windsurf. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Windsurf Playbook. Powered by Slash.`,
     },
     prism: {
       theme: prismThemes.github,

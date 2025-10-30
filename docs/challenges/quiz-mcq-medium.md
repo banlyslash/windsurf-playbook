@@ -232,7 +232,8 @@ Scenario-style questions to check deeper understanding. Choose the best answer.
 
 ---
 
-## Answer Key
+<details>
+  <summary>Answer Key</summary>
 - **Tab**: 1-B, 2-B, 3-C
 - **Command**: 1-B, 2-B, 3-B
 - **Cascade**: 1-B, 2-B, 3-B
@@ -245,3 +246,4 @@ Scenario-style questions to check deeper understanding. Choose the best answer.
 - **Model Selection**: 1-B, 2-B, 3-A
 - **Model Selection for Coding**: 1-A, 2-B, 3-B
 - **Model Specialties**: 1-B, 2-A, 3-B
+</details>

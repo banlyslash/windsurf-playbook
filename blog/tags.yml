@@ -1,19 +1,19 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+windsurf:
+  label: Windsurf
+  permalink: /windsurf
+  description: Posts related to Windsurf AI assistant
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+playbook:
+  label: Playbook
+  permalink: /playbook
+  description: Guides and best practices for development workflows
+
+introduction:
+  label: Introduction
+  permalink: /introduction
+  description: Introductory content for new features and resources
 
 docusaurus:
   label: Docusaurus
   permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+  description: Content related to Docusaurus documentation framework

@@ -232,7 +232,8 @@ Each topic has 3–5 easy questions to reflect on key concepts. Choose the best 
 
 ---
 
-## Answer Key
+<details>
+  <summary>Answer Key</summary>
 - **Tab**: 1-B, 2-C, 3-A
 - **Command**: 1-B, 2-B, 3-B
 - **Cascade**: 1-A, 2-B, 3-B
@@ -245,3 +246,4 @@ Each topic has 3–5 easy questions to reflect on key concepts. Choose the best 
 - **Model Selection**: 1-B, 2-B, 3-A
 - **Model Selection for Coding**: 1-B, 2-B, 3-B
 - **Model Specialties**: 1-B, 2-D, 3-B
+</details>
