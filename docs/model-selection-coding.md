@@ -1,4 +1,4 @@
-# Model Selection for Coding — Benchmark‑Backed Quick Guide
+# For Coding
 
 Use public benchmarks as directional signal; your repo, tools, and constraints matter. Prefer real‑world evals (SWE‑bench Verified, LiveCodeBench) over narrow function tests.
 

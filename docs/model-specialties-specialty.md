@@ -1,4 +1,4 @@
-# Model Specialties: Top Picks (Capability-Based, With Benchmarks)
+# By Specialty
 
 Selections focus on capability fit; include public benchmark evidence where available. Benchmarks vary by setup; treat as directional.
 

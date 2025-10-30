@@ -1,4 +1,4 @@
-# Windsurf Planning Mode: Quick Start Guide
+# Planning Mode
 
 ## Introduction
 Planning Mode in Windsurf Cascade is a powerful feature that enhances productivity for complex, multi-step tasks. It provides a specialized planning agent that continuously refines long-term plans while your selected AI model focuses on executing short-term actions. Instead of creating a separate markdown file, Planning Mode creates an interactive Todo list within the conversation, making it easy to track progress and adjust plans as needed.

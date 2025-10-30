@@ -1,4 +1,4 @@
-# Cascade — 2‑Minute Productivity Guide
+# Cascade
 
 ## Introduction
 Cascade is your in‑IDE coding copilot for chat and code edits. It understands large repos fast (Fast Context), can plan multi‑step work (Planning Mode), and apply safe edits with reverts.

@@ -1,4 +1,4 @@
-# Windsurf Tab — 2‑Minute Productivity Guide
+# Tab
 
 ## Introduction
 Windsurf Tab accelerates high‑quality coding by turning your editor into a fast, context‑aware assistant:

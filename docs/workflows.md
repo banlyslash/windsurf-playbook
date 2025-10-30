@@ -1,4 +1,4 @@
-# Windsurf Workflows: Quick Start Guide
+# Workflows
 
 ## Introduction
 Workflows in Windsurf are structured sequences of steps that guide Cascade through repetitive tasks, enhancing productivity and ensuring consistency. Unlike Rules (which provide context at the prompt level), Workflows operate at the trajectory level, orchestrating a series of interconnected actions. They're particularly valuable for standardizing complex processes like addressing PR comments, dependency management, or deployment procedures.

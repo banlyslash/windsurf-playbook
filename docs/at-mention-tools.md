@@ -1,5 +1,4 @@
-# Cascade @-Mention Tools — Quick Guide
-
+# Cascade @-Mention Tools
 Below are the features you can explicitly invoke via @-mentions in Cascade.
 
 ## @web (Web Search)

@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Windsurf Documentation',
-  tagline: 'Feature documentation for the Windsurf platform',
+  title: 'Windsurf Playbook',
+  tagline: 'The AI-Powered Developer Guideline',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -75,17 +75,16 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Windsurf Docs',
+      title: 'Windsurf Playbook',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Features',
+          label: 'Get Started',
+          to: '/docs/get-started',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -102,8 +101,8 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Features',
-              to: '/docs/intro',
+              label: 'Get Started',
+              to: '/docs/get-started',
             },
           ],
         },

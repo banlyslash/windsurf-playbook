@@ -1,4 +1,4 @@
-# Windsurf Command — 2‑Minute Productivity Guide
+#  Command
 
 ## Introduction
 Windsurf Command turns natural‑language prompts into high‑quality code edits directly in your editor.

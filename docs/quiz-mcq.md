@@ -1,4 +1,4 @@
-# Windsurf Features — Multiple Choice Quiz (Easy)
+# Quiz 1
 
 Each topic has 3–5 easy questions to reflect on key concepts. Choose the best answer.
 

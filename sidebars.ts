@@ -1,4 +1,4 @@
-import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -15,45 +15,42 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   // Manually defined sidebar for better organization
   tutorialSidebar: [
-    'intro',
+    "intro",
+    "get-started",
     {
-      type: 'category',
-      label: 'Core Features',
+      type: "category",
+      label: "Windsurf in Action",
       items: [
-        'cascade',
-        'cascade-memories',
-        'cascade-rules',
-        'command',
-        'mcp'
+        "windsurf-in-actions/project-initialization",
+        "windsurf-in-actions/add-to-existing-project",
       ],
     },
     {
-      type: 'category',
-      label: 'Model Selection',
+      type: "category",
+      label: "Core Features",
+      items: ["tab", "command", "cascade", "cascade-memories", "cascade-rules"],
+    },
+    {
+      type: "category",
+      label: "Model Selection",
       items: [
-        'model-selection',
-        'model-selection-coding',
-        'model-specialties-specialty'
+        "model-selection",
+        "model-selection-coding",
+        "model-specialties-specialty",
       ],
     },
     {
-      type: 'category',
-      label: 'Productivity Tools',
-      items: [
-        'workflows',
-        'planning-mode',
-        'at-mention-tools',
-        'tab'
-      ],
+      type: "category",
+      label: "Productivity Tools",
+      items: ["workflows", "planning-mode", "at-mention-tools", "mcp"],
     },
+
+    "caution",
+    "stuff-you-should-know",
     {
-      type: 'category',
-      label: 'Quiz Features',
-      items: [
-        'quiz',
-        'quiz-mcq',
-        'quiz-mcq-medium'
-      ],
+      type: "category",
+      label: "Challenges",
+      items: ["quiz", "quiz-mcq", "quiz-mcq-medium"],
     },
   ],
 };

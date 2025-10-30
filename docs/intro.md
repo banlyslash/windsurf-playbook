@@ -2,12 +2,13 @@
 sidebar_position: 1
 ---
 
-# Windsurf Features Quick Start Guide
+# Introduction
 
 This documentation contains concise summaries of key Windsurf features, focusing on their introduction, settings, do's and don'ts, and tips for maximizing code quality and productivity.
 
 ## Available Feature Summaries
 
+- [Get Started](./get-started) - Tab system for organization
 - [Cascade Memories](./cascade-memories) - A system for sharing and persisting context across conversations
 - [Workflows](./workflows) - Structured sequences of steps for repetitive tasks
 - [Planning Mode](./planning-mode) - A specialized planning agent for complex, multi-step tasks

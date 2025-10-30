@@ -1,4 +1,4 @@
-# MCP (Model Context Protocol) — Quick Start
+# MCP (Model Context Protocol)
 
 Get productive by connecting Cascade to external tools and services via MCP.
 

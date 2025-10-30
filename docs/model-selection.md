@@ -1,4 +1,4 @@
-# Model Selection Guide
+# For Basic Usage
 
 Quick reference for selecting the right AI model in Windsurf for different use cases.
 

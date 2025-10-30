@@ -1,4 +1,4 @@
-# Windsurf Features — Multiple Choice Quiz (Medium)
+# Quiz 2
 
 Scenario-style questions to check deeper understanding. Choose the best answer.
 

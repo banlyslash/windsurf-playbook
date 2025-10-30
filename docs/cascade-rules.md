@@ -1,4 +1,4 @@
-# Cascade Rules — 2‑Minute Productivity Guide
+# Rules
 
 ## Introduction
 Cascade Rules are persistent, developer‑defined guidelines that steer Cascade’s behavior across conversations and workspaces. Use rules to encode coding standards, review gates, and safety constraints so every action stays high‑quality and consistent.

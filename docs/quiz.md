@@ -1,4 +1,4 @@
-# Windsurf Features — Reflection Quiz
+# Knowledge Reflection
 
 Use these questions to confirm understanding and get ready to apply the features in this repo.
 
