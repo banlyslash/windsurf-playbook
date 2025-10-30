@@ -27,7 +27,6 @@ This documentation contains concise summaries of key Windsurf features, focusing
 - [At-mention Tools](./productivity-tools/at-mention-tools) - Using @ mentions to access tools
 
 ### Model Selection
-- [Model Selection](./model-selection/model-selection) - Guidelines for selecting the appropriate model for your tasks
 - [Model Selection for Coding](./model-selection/model-selection-coding) - Specific guidelines for coding tasks
 - [Model Specialties](./model-selection/model-specialties-specialty) - Understanding the specialties of different models
 
