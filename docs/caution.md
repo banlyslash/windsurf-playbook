@@ -1,4 +1,4 @@
-# Cautions
+# Caution
 
 > ⚠️ **TL;DR**: Watch your credits, protect sensitive code, mind your system resources, and don't trust AI blindly.
 

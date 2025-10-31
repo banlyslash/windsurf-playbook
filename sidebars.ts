@@ -61,7 +61,10 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Challenges",
-      items: ["challenges/quiz-mcq", "challenges/quiz-mcq-medium"],
+      items: [
+        "challenges/quiz-mcq", 
+        "challenges/quiz-mcq-medium"
+      ],
     },
   ],
 };

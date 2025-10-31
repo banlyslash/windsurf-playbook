@@ -1,28 +1,38 @@
-# Windsurf Setup for Existing Project
+# Adding Windsurf to Existing Projects
 
+## Using Windsurf Effectively for Existing Projects
 
-## Using Windsurf Effectively for Existing Project
-Purpose:
+**Purpose:**
 To enhance project documentation, ensure adherence to best practices, maintain consistent code quality, and streamline ongoing development and maintenance processes within your existing project. It helps keep the project well-organized, up-to-date, and aligned with industry standards.
 
-### 1. Overview
-Windsurf can assist existing projects by:
+## 1. Overview
 
-- Documenting the current setup and configuration.
-- Enforcing best practices and code standards.
-- Generating or updating documentation like README.md.
-- Analyzing the codebase to create or refine a project conventions file (convention.md).
-- Ensuring ongoing consistency in code quality and structure.
-- Facilitating smooth maintenance and onboarding for current project teams.
+Windsurf helps us:
 
-### 2. Step-by-Step Process
-### 2.1 – Analyze To Create Rules
-Purpose:
-to provide explicit context, guidance, and constraints to its AI agent, Cascade. This ensures the AI's output is accurate, consistent, and tailored to your specific project and coding preferences, preventing it from generating generic or incorrect suggestions.
+1. Document the current setup and configuration.
 
-What Effect if you’re not set rules on windsurf?
-When you ask to create code for fixing and new feature it would change existing code rewriting by Cascade minimal it would your code really diferent code style and worst case it would make current feature not working becase some of code rewriting by Cascade
-Example Prompt (Use Thinking model in my case I used Claude Sonnet 4.5 Thinking):
+2. Enforce best practices and code standards.
+
+3. Generate or update documentation like README.md.
+
+4. Analyze the codebase to create or refine a project conventions file (convention.md).
+
+5. Ensure ongoing consistency in code quality and structure.
+
+6. Facilitate smooth maintenance and onboarding for current project teams.
+
+## 2. Step-by-Step Process
+
+### Step 2.1-Analyze To Create Rules
+**Responsibility:** Tech Lead or Developer.
+
+**Purpose:**
+To provide explicit context, guidance, and constraints to its AI agent, Cascade. This ensures the AI's output is accurate, consistent, and tailored to your specific project and coding preferences, preventing it from generating generic or incorrect suggestions.
+
+**What happens if you don't set rules on Windsurf?**
+When you ask to create code for fixing bugs or adding new features, Cascade might change existing code with a different code style. In the worst case, it could make current features stop working because of code rewriting.
+
+**Example Prompt** (Use Thinking model like Claude Sonnet 4.5 Thinking):
 
 ```
 Analyze this project and create IDE rules base on this template:
@@ -699,69 +709,93 @@ src/modules/Feature/SubFeature/
 Last Updated: 2025-10-07
 ``````
 
-### Step 2.2 – Create or Update README.md
-- Ask Windsurf (Cascade) to scan the codebase
-- Commit the generated README.md to the repository.
+### Step 2.2-Create or Update README.md
 
-Prompt:
-```
-Read through the current project and generate a README.md file including:
-- Project title
-- Description
-- Installation instructions
-- Development commands
-- Build & deployment instructions
-- Tech stack
-- Project structure overview
-```
+* Ask Windsurf (Cascade) to scan the codebase
 
-### Step 2.3 – Create or Update convention.md (Project Rules)
-- After the README.md is ready, request Windsurf (Cascade) to store convention.md in the project root as the single source of truth for coding standards.
+* Commit the generated README.md to the repository
 
-Prompt:
-```
-Analyze the current project, its folder structure, ESLint config, and README.md, then generate a 'convention.md' file containing:
+  > **Prompt:**
+  > Read through the current project and generate a README.md file including:
+  >
+  > * Project title
+  >
+  > * Description
+  >
+  > * Installation instructions
+  >
+  > * Development commands
+  >
+  > * Build & deployment instructions
+  >
+  > * Tech stack
+  >
+  > * Project structure overview
 
-- Coding standards
-- Naming conventions
-- Folder structure rules
-- Testing requirements
-```
+### Step 2.3-Create or Update convention.md (Project Rules)
 
-### Step 2.4 – Ongoing Maintenance with Windsurf
+After the README.md is ready, request Windsurf (Cascade) to store `convention.md` in the project root as the single source of truth for coding standards.
+
+> Analyze the current project, its folder structure, ESLint config, and README.md, then generate a 'convention.md' file containing:
+>
+> * Coding standards
+>
+> * Naming conventions
+>
+> * Folder structure rules
+>
+> * Testing requirements
+
+### Step 2.4-Ongoing Maintenance with Windsurf
+
 When conventions change:
-- Update convention.md.
-- Ask Windsurf to re-analyze the project for compliance.
 
-### 3. Example Windsurf Prompt Library
-Keep these prompts in a shared windsurf-prompts.md file for the team. This is to document how the team is using prompts to help in there project.
+* Update `convention.md`
 
-```
-Setup Configs Prompt:
-Configure ESLint, Prettier, husky, and lint-staged with recommended best practices for [framework].
----
-Generate README Prompt:
-Analyze this project and create a professional README.md file with usage, commands, and folder structure.
----
-Create Convention File Prompt:
-Based on the README.md, eslint config, and folder structure, create a convention.md documenting coding rules, naming standards, and project structure.
----
-Create Autocomplete component Prompt:
-@convention.md help me create a reusable component under modules/common/component called Autocomplete which use cmdk and shadcn and tailwindcss. The component should accept: value, options, className as props
----
-[Add your own project prompts]
-```
+* Ask Windsurf to re-analyze the project for compliance
 
-### 4. Config Windsurf Rules
+## 3. Example Windsurf Prompt Library
 
-![add-to-existing-project-figure-1.png](./add-to-existing-project-figure-1.png)
+Keep these prompts in a shared `windsurf-prompts.md` file for the team. This is to document how the team is using prompts to help in their project.
 
-- Go to Cascade Panel → Customizations → + Workspace
-- Copy and paste the rule from convention.md
-- Now you can have a Windsurf rule you can trigger
+**Setup Configs Prompt:**
 
-Example usage:
-```prompt
-@convention.md help me create a reusable component under modules/common/component called 
-Autocomplete which use cmdk and shadcn and tailwindcss. The component should accept: value, options, className as props
-```
+> Configure ESLint, Prettier, husky, and lint-staged with recommended
+> best practices for \[framework\].
+
+**Generate README Prompt:**
+
+> Analyze this project and create a professional README.md file with
+> usage, commands, and folder structure.
+
+**Create Convention File Prompt:**
+
+> Based on the README.md, eslint config, and folder structure, create a
+> convention.md documenting coding rules, naming standards, and project
+> structure.
+
+**Create Autocomplete component Prompt:**
+
+> @convention.md help me create a reusable component under
+> modules/common/component called Autocomplete which use cmdk and shadcn
+> and tailwindcss. The component should accept: value, options,
+> className as props
+
+\[Add your own project prompts\]
+
+## 4. Config Windsurf Rules
+
+1. Go to Cascade Panel
+   ![add-to-existing-project-figure-1.png](./add-to-existing-project-figure-1.png)
+
+2. Click **+ Workspace**
+
+3. Copy and paste the rule from `convention.md`
+
+Now you can have a Windsurf rule you can trigger.
+
+**Example usage:**
+
+> @convention.md help me create a reusable component under modules/common/component called
+> Autocomplete which use cmdk and shadcn and tailwindcss. The component should accept: value, options,
+> className as props

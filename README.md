@@ -1,17 +1,36 @@
 # Windsurf Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/) and contains comprehensive documentation for Windsurf features. The content is sourced from the `windsurf-features` directory in the Windsurf Playbook repository.
+This website is built using [Docusaurus](https://docusaurus.io/) and contains comprehensive documentation for Windsurf features. The content is organized to provide clear guidance on using Windsurf's powerful capabilities.
+
+## Features
+
+- **Comprehensive Documentation**: Detailed guides for all Windsurf features
+- **Interactive Quizzes**: Test your knowledge with interactive quizzes using the custom Quiz component
+- **Responsive Design**: Optimized for both desktop and mobile viewing
+- **Searchable Content**: Fast and accurate search functionality
+
+## Project Structure
+
+- `/docs`: Main documentation content organized by topic
+  - `/core-features`: Documentation for Tab, Command, Cascade, and other core features
+  - `/model-selection`: Guides for selecting appropriate models
+  - `/productivity-tools`: Documentation for workflows, planning mode, and other tools
+  - `/challenges`: Interactive quizzes to test knowledge
+- `/src/components`: Custom React components
+  - `/Quiz`: Interactive quiz component
+  - `/ThreadedQuiz`: Enhanced quiz component for continuous question flow
+- `/blog`: Blog posts and announcements
 
 ## Installation
 
 ```bash
-yarn
+npm install
 ```
 
 ## Local Development
 
 ```bash
-yarn start
+npm run start
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
@@ -19,10 +38,55 @@ This command starts a local development server and opens up a browser window. Mo
 ## Build
 
 ```bash
-yarn build
+npm run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+## Custom Components
+
+### Quiz Component
+
+The documentation includes an interactive quiz feature that allows users to test their knowledge. Two quiz implementations are available:
+
+1. **Standard Quiz**: Individual quiz sections with multiple-choice questions
+2. **Threaded Quiz**: Continuous quiz experience that flows through all questions while maintaining category organization
+
+To use the quiz component in any markdown page:
+
+```jsx
+<Quiz 
+  title="Quiz Title" 
+  questions={[
+    {
+      question: "Question text?",
+      options: ["Option 1", "Option 2", "Option 3", "Option 4"],
+      correctAnswer: 0, // Index of correct answer (0-based)
+      explanation: "Explanation of the correct answer"
+    }
+    // More questions...
+  ]} 
+/>
+```
+
+For a threaded quiz experience:
+
+```jsx
+<ThreadedQuiz 
+  title="Quiz Title" 
+  showCategories={true}
+  questions={[
+    {
+      category: "Category Name",
+      question: "Question text?",
+      options: ["Option 1", "Option 2", "Option 3", "Option 4"],
+      correctAnswer: 0,
+      explanation: "Explanation of the correct answer"
+    }
+    // More questions...
+  ]} 
+/>
+```
 
 ## Deployment
 

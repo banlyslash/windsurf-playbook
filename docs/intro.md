@@ -13,12 +13,16 @@ This documentation contains concise summaries of key Windsurf features, focusing
 - [Stuff You Should Know](./stuff-you-should-know) - Essential information
 - [Caution](./caution) - Important warnings and considerations
 
+### Windsurf in Action
+- [Project Initialization](./windsurf-in-actions/project-initialization) - Setting up new projects
+- [Add to Existing Project](./windsurf-in-actions/add-to-existing-project) - Integrating Windsurf with existing projects
+
 ### Core Features
+- [Tab](./core-features/tab) - Tab system for organization
+- [Command](./core-features/command) - Command execution capabilities
 - [Cascade](./core-features/cascade) - Core features of the Cascade system
 - [Cascade Memories](./core-features/cascade-memories) - A system for sharing and persisting context across conversations
 - [Cascade Rules](./core-features/cascade-rules) - Rules system for the Cascade platform
-- [Command](./core-features/command) - Command execution capabilities
-- [Tab](./core-features/tab) - Tab system for organization
 
 ### Productivity Tools
 - [Workflows](./productivity-tools/workflows) - Structured sequences of steps for repetitive tasks
@@ -34,9 +38,7 @@ This documentation contains concise summaries of key Windsurf features, focusing
 - [Quiz MCQ](./challenges/quiz-mcq) - Multiple choice quiz functionality
 - [Quiz MCQ Medium](./challenges/quiz-mcq-medium) - Medium difficulty multiple choice quizzes
 
-### Windsurf in Action
-- [Project Initialization](./windsurf-in-actions/project-initialization) - Setting up new projects
-- [Add to Existing Project](./windsurf-in-actions/add-to-existing-project) - Integrating Windsurf with existing projects
+
 
 ## How to Use These Guides
 
