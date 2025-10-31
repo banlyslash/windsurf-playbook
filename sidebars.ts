@@ -27,13 +27,13 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "Core Features",
+      label: "Essentials",
       items: [
-        "core-features/tab",
-        "core-features/command",
-        "core-features/cascade",
-        "core-features/cascade-memories",
-        "core-features/cascade-rules",
+        "essentials/tab",
+        "essentials/command",
+        "essentials/cascade",
+        "essentials/cascade-memories",
+        "essentials/cascade-rules",
       ],
     },
     {

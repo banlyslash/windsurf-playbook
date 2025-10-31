@@ -29,7 +29,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/get-started"
           >
-            Get Started - Produtive in Day One ⏱️
+            Get Started - Productive on Day One ⏱️
           </Link>
         </div>
       </div>

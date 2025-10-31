@@ -29,7 +29,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Powered by Slash',
+    title: 'Supported by Slash',
     Svg: require('@site/static/img/undraw_powered.svg').default,
     description: (
       <>

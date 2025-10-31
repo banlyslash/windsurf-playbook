@@ -12,7 +12,7 @@ This website is built using [Docusaurus](https://docusaurus.io/) and contains co
 ## Project Structure
 
 - `/docs`: Main documentation content organized by topic
-  - `/core-features`: Documentation for Tab, Command, Cascade, and other core features
+  - `/essentials`: Documentation for Tab, Command, Cascade, and other core features
   - `/model-selection`: Guides for selecting appropriate models
   - `/productivity-tools`: Documentation for workflows, planning mode, and other tools
   - `/challenges`: Interactive quizzes to test knowledge

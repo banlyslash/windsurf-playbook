@@ -19,14 +19,6 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
-  
-  // Add stylesheets (including Google Fonts)
-  stylesheets: [
-    {
-      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap',
-      type: 'text/css',
-    },
-  ],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.

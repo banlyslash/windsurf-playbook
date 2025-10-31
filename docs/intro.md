@@ -18,11 +18,11 @@ This documentation contains concise summaries of key Windsurf features, focusing
 - [Add to Existing Project](./windsurf-in-actions/add-to-existing-project) - Integrating Windsurf with existing projects
 
 ### Core Features
-- [Tab](./core-features/tab) - Tab system for organization
-- [Command](./core-features/command) - Command execution capabilities
-- [Cascade](./core-features/cascade) - Core features of the Cascade system
-- [Cascade Memories](./core-features/cascade-memories) - A system for sharing and persisting context across conversations
-- [Cascade Rules](./core-features/cascade-rules) - Rules system for the Cascade platform
+- [Tab](./essentials/tab) - Tab system for organization
+- [Command](./essentials/command) - Command execution capabilities
+- [Cascade](./essentials/cascade) - Core features of the Cascade system
+- [Cascade Memories](./essentials/cascade-memories) - A system for sharing and persisting context across conversations
+- [Cascade Rules](./essentials/cascade-rules) - Rules system for the Cascade platform
 
 ### Productivity Tools
 - [Workflows](./productivity-tools/workflows) - Structured sequences of steps for repetitive tasks

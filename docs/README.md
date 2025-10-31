@@ -4,7 +4,7 @@ This directory contains concise summaries of key Windsurf features, focusing on 
 
 ## Available Feature Summaries
 
-- [Cascade Memories](./core-features/cascade-memories.md) - A system for sharing and persisting context across conversations
+- [Cascade Memories](./essentials/cascade-memories.md) - A system for sharing and persisting context across conversations
 - [Workflows](./productivity-tools/workflows.md) - Structured sequences of steps for repetitive tasks
 - [Planning Mode](./productivity-tools/planning-mode.md) - A specialized planning agent for complex, multi-step tasks
 
