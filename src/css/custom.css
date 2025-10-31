@@ -62,3 +62,30 @@
   margin: 1rem 0;
   border-radius: 0 4px 4px 0;
 }
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+
+.space-x-4 {
+  gap: 1rem;
+}
+
+.h-\[40px\] {
+  height: 40px;
+}

@@ -12,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Quick Onboarding',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/undraw_onboarding.svg').default,
     description: (
       <>
         Windsurf Playbook was designed for quickly adopting AI featured Windsurf as a daily drive for delivery team (developer).
@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/undraw_focus.svg').default,
     description: (
       <>
         We squeeze down the information about Windsurf so you only focus on essentials and get to productivity in a matter of minutes.
@@ -30,7 +30,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Powered by Slash',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/undraw_powered.svg').default,
     description: (
       <>
         Contributed by members of Slash where we cheerish one another to grow and learn as a community.
@@ -42,10 +42,10 @@ const FeatureList: FeatureItem[] = [
 function Feature({title, Svg, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
+      <div className="flex justify-center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
-      <div className="text--center padding-horiz--md">
+      <div className="text--center padding-horiz--md mt-4">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>

@@ -1,23 +1,17 @@
 sunhak:
   name: Sunhak Hout
-  title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
-  url: https://linkedin.com/in/sunhak
-  image_url: https://github.com/sunhak.png
+  title: Tech Lead
+  image_url: https://github.com/sunhak-slash.png
   page: true
   socials:
-    x: sunhak
-    linkedin: sunhak
-    github: sunhak
+    github: sunhak-slash
 
 banly:
   name: Banly Tong
-  title: AI Engineer
-  url: https://banlytong.com
-  image_url: https://github.com/banlytong.png
+  title: Software Engineer
+  image_url: https://github.com/banlyslash.png
   page:
     # customize the url of the author page at /blog/authors/<permalink>
     permalink: '/all-banly-tong-articles'
   socials:
-    x: banlytong
-    linkedin: banlytong
-    github: banlytong
+    github: banlyslash
