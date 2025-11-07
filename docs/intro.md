@@ -37,6 +37,10 @@ This documentation contains concise summaries of key Windsurf features, focusing
 - [Model Selection for Coding](./model-selection/model-selection-coding) - Specific guidelines for coding tasks
 - [Model Specialties](./model-selection/model-specialties-specialty) - Understanding the specialties of different models
 
+### Use Cases
+- [From Requirement to Code](./use-cases/from-requirement-to-code) - A comprehensive workflow using Jira Revo AI and Windsurf to build features from requirements to implementation
+- [Prompt Engineering for Coding](./use-cases/prompt-engineering-for-coding) - A detailed guide to crafting effective prompts for coding tasks with examples of good and bad prompts
+
 ### Challenges
 - [Quiz MCQ](./challenges/quiz-mcq) - Multiple choice quiz functionality
 - [Quiz MCQ Medium](./challenges/quiz-mcq-medium) - Medium difficulty multiple choice quizzes
