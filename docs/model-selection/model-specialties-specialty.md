@@ -1,3 +1,9 @@
+---
+description: "Understand AI model specialties in Windsurf. Learn which models excel at different tasks like coding, reasoning, and creative work."
+keywords: ["model specialties", "AI capabilities", "Windsurf", "model comparison", "Cascade", "performance", "specialization"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # By Specialty
 
 Selections focus on capability fit; include public benchmark evidence where available. Benchmarks vary by setup; treat as directional.

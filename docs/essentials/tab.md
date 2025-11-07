@@ -1,3 +1,9 @@
+---
+description: "Master Windsurf Tab autocomplete feature. Learn about inline suggestions, Tab to Import, Tab to Jump, and best practices for faster coding."
+keywords: ["Tab", "autocomplete", "Windsurf", "code completion", "Tab to Import", "Tab to Jump", "FIM"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # Tab
 
 ## Introduction

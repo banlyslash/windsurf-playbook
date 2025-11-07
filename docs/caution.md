@@ -1,3 +1,9 @@
+---
+description: "Important warnings and best practices for using Windsurf IDE. Learn about credit management, code security, system resources, and AI limitations."
+keywords: ["Windsurf", "caution", "warnings", "best practices", "security", "credits", "AI limitations"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # Caution
 
 > ⚠️ **TL;DR**: Watch your credits, protect sensitive code, mind your system resources, and don't trust AI blindly.

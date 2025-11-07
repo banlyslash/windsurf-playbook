@@ -1,3 +1,9 @@
+---
+description: "Master Planning Mode in Windsurf for complex, multi-step development tasks. Learn structured planning with Cascade AI agent."
+keywords: ["Planning Mode", "Cascade", "planning", "multi-step", "Windsurf", "task management", "structured workflow"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # Planning Mode
 
 ## Introduction

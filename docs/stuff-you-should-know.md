@@ -1,11 +1,20 @@
+---
+description: "Essential tips and tricks for using Windsurf IDE effectively. Learn about Cascade memory, conversation exports, and productivity hacks."
+keywords: ["Windsurf", "tips", "tricks", "Cascade", "memory", "productivity", "best practices"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # Stuff You Should Know
 
-Did you know:
-- **Cascade memory** is fading, that mean early context is getting blur overtime, to refresh that context it's advised to ask Cascade to explain the relevant content to verify its understand before doing any intensive change for example naming convention migration. 
-- **Conversation** can be exported as markdown with 'Download Trajectory' in Cascade action menu. 
-- **Generate documentation is costly**, consider enforcing some rules to avoid unnecessary text generation.
-- **Multiple Windsurf Windows** is not productive experience, instead it confuses Windsurf and cause unexpected behavior such as can't editing file. 
-- **Model Selection**: using expensive model can drain credits quickly, choose wisely. 
+Did you know that:
+- **Cascade memory** fades over time, making early context blur! To refresh that context, it's highly recommended to ask Cascade to clarify relevant content before embarking on any major changes, like a naming convention migration.
+- You can **export conversations** as markdown using the `Download Trajectory` option in the Cascade action menu! It's a handy way to keep track of your discussions.
+- **Generating documentation can be a resource hog**! It's wise to enforce some rules to prevent unnecessary text generation and save on costs.
+- **Multiple Windsurf Windows**? Not the best idea! They can confuse Windsurf and lead to unexpected hiccups, like being unable to edit files.
+- **Model Selection** is crucial! Using an expensive model can quickly drain your credits, so choose wisely!
+- You can **Drag and Drop** to @-mention a file or folder! Typing mentions can be finicky at times, so this feature will save you some trouble.
+- **Local Indexing** for a new workspace can lead to initial slowness, as Windsurf requires approximately 5 to 10 minutes to index the entire codebase before you can fully utilize its features.
+
 
 ## Test Your Knowledge
 

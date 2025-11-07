@@ -1,3 +1,9 @@
+---
+description: "Guide to selecting the best AI model for coding tasks in Windsurf. Compare models, benchmarks, and recommendations for different coding scenarios."
+keywords: ["model selection", "coding", "AI models", "Windsurf", "benchmarks", "performance", "Cascade"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # For Coding
 
 Use public benchmarks as directional signal; your repo, tools, and constraints matter. Prefer real‑world evals (SWE‑bench Verified, LiveCodeBench) over narrow function tests.

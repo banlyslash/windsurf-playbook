@@ -1,3 +1,9 @@
+---
+description: "Learn how to use Windsurf Command for inline AI-powered code generation and editing. Master natural language prompts and code transformation."
+keywords: ["Command", "code editing", "Windsurf", "AI", "inline editing", "code generation", "natural language"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 #  Command
 
 ## Introduction

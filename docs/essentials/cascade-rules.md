@@ -1,3 +1,9 @@
+---
+description: "Learn how to create and manage Cascade Rules to enforce coding standards and project conventions. Guide Cascade AI with custom rules."
+keywords: ["Rules", "Cascade", "code standards", "conventions", "Windsurf", "customization", "guidelines"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # Rules
 
 ## Introduction

@@ -1,3 +1,9 @@
+---
+description: "Learn how to use Cascade Memories to persist context across conversations. Understand memory management, best practices, and limitations."
+keywords: ["Memories", "Cascade", "context", "persistent", "Windsurf", "conversation", "knowledge base"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # Memories
 
 ## Introduction

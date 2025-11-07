@@ -1,3 +1,9 @@
+---
+description: "Learn how to create and use Workflows in Windsurf for automating repetitive development tasks and improving productivity."
+keywords: ["Workflows", "automation", "Windsurf", "Cascade", "task automation", "productivity", "repetitive tasks"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # Workflows
 
 ## Introduction

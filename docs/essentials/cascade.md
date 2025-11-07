@@ -1,3 +1,9 @@
+---
+description: "Learn how to use Cascade, Windsurf's intelligent AI agent for code generation, planning, and multi-file editing. Master context, models, and best practices."
+keywords: ["Cascade", "AI agent", "code generation", "planning mode", "Windsurf", "agentic IDE", "context management"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # Cascade
 
 ## Introduction

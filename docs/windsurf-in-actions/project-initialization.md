@@ -1,3 +1,9 @@
+---
+description: "Learn how to use Windsurf and Cascade AI to initialize new projects efficiently. Best practices for project setup with AI assistance."
+keywords: ["project initialization", "Windsurf", "Cascade", "new project", "setup", "scaffolding", "best practices"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # Project Initialization
 
 ## Using Windsurf Effectively for New Project Initialization

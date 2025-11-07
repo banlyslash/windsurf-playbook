@@ -1,3 +1,9 @@
+---
+description: "Learn how to integrate Windsurf and Cascade AI into existing projects. Best practices for adopting AI-powered development in established codebases."
+keywords: ["Windsurf integration", "existing projects", "Cascade", "adoption", "migration", "best practices", "legacy code"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # Adding Windsurf to Existing Projects
 
 ## Using Windsurf Effectively for Existing Projects
