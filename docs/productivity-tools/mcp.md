@@ -1,3 +1,9 @@
+---
+description: "Learn how to use Model Context Protocol (MCP) to connect Cascade AI with external tools and services for enhanced productivity."
+keywords: ["MCP", "Model Context Protocol", "Cascade", "external tools", "integration", "Windsurf", "context"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # MCP (Model Context Protocol)
 
 Get productive by connecting Cascade to external tools and services via MCP.

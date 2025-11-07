@@ -1,3 +1,9 @@
+---
+description: "Learn how to use @-mentions in Cascade to reference files, directories, functions, and tools for enhanced context and productivity."
+keywords: ["@-mention", "Cascade", "context", "tools", "Windsurf", "file reference", "function reference"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # Cascade @-Mention Tools
 Below are the features you can explicitly invoke via @-mentions in Cascade.
 

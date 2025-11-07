@@ -1,3 +1,9 @@
+---
+description: "Learn how to use @web mentions in Cascade for real-time web search and up-to-date information retrieval during development."
+keywords: ["web search", "@web", "Cascade", "Windsurf", "search", "real-time information", "context"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # @-Mention for Web Search
 
 ## Introduction

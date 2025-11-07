@@ -1,5 +1,8 @@
 ---
 sidebar_position: 1
+description: "Comprehensive guide to Windsurf features including Cascade AI agent, Tab autocomplete, Command editor, and productivity tools for developers."
+keywords: ["Windsurf", "documentation", "guide", "features", "Cascade", "IDE"]
+image: "/img/docusaurus-social-card.jpg"
 ---
 
 # Introduction

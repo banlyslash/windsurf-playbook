@@ -19,6 +19,9 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
+  
+  // SEO Configuration
+  trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -71,9 +74,83 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      "@docusaurus/plugin-sitemap",
+      {
+        changefreq: "weekly",
+        priority: 0.5,
+        ignorePatterns: ["/tests/**"],
+        filename: "sitemap.xml",
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
+    metadata: [
+      {
+        name: "description",
+        content: "Windsurf Playbook - The AI-Powered Developer Guideline. Learn how to use Windsurf IDE with Cascade AI agent for productive development.",
+      },
+      {
+        name: "keywords",
+        content: "Windsurf, IDE, AI, Cascade, code editor, agentic AI, developer tools, programming",
+      },
+      {
+        name: "author",
+        content: "Windsurf Team",
+      },
+      {
+        property: "og:title",
+        content: "Windsurf Playbook - The AI-Powered Developer Guideline",
+      },
+      {
+        property: "og:description",
+        content: "Learn how to use Windsurf IDE with Cascade AI agent for productive development.",
+      },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://windsurf-docs.example.com",
+      },
+      {
+        property: "og:image",
+        content: "https://windsurf-docs.example.com/img/docusaurus-social-card.jpg",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "Windsurf Playbook - The AI-Powered Developer Guideline",
+      },
+      {
+        name: "twitter:description",
+        content: "Learn how to use Windsurf IDE with Cascade AI agent for productive development.",
+      },
+      {
+        name: "twitter:image",
+        content: "https://windsurf-docs.example.com/img/docusaurus-social-card.jpg",
+      },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1.0",
+      },
+      {
+        name: "theme-color",
+        content: "#1f2937",
+      },
+      {
+        httpEquiv: "x-ua-compatible",
+        content: "IE=edge",
+      },
+    ],
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -93,7 +170,7 @@ const config: Config = {
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/banlyslash/windsurf-playbook",
+          href: "https://github.com/slashdigital/windsurf-playbook",
           label: "GitHub",
           position: "right",
         },
@@ -120,15 +197,15 @@ const config: Config = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/banlyslash/windsurf-playbook",
+              href: "https://github.com/slashdigital/windsurf-playbook",
             },
             {
               label: "Contributing",
-              href: "https://github.com/banlyslash/windsurf-playbook/tree/main/CONTRIBUTING.md",
+              href: "https://github.com/slashdigital/windsurf-playbook/tree/main/CONTRIBUTING.md",
             },
             {
               label: "License",
-              href: "https://github.com/banlyslash/windsurf-playbook/tree/main/LICENSE.md",
+              href: "https://github.com/slashdigital/windsurf-playbook/tree/main/LICENSE.md",
             },
           ],
         },

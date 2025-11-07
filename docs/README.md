@@ -1,3 +1,9 @@
+---
+description: "Comprehensive quick start guide to Windsurf features. Learn about Cascade AI agent, Tab autocomplete, Command editing, and productivity tools."
+keywords: ["Windsurf", "features", "guide", "quick start", "Cascade", "Tab", "Command", "productivity"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # Windsurf Features Quick Start Guide
 
 This directory contains concise summaries of key Windsurf features, focusing on their introduction, settings, do's and don'ts, and tips for maximizing code quality and productivity.

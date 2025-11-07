@@ -1,3 +1,9 @@
+---
+description: "Learn how to get started with Windsurf IDE. Discover Tab autocomplete, Command inline editing, Cascade AI agent, model selection, and productivity tools."
+keywords: ["Windsurf", "get started", "tutorial", "IDE", "AI", "Cascade", "Tab", "Command"]
+image: "/img/docusaurus-social-card.jpg"
+---
+
 # Get Started
 
 ## Introduction

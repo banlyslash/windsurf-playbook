@@ -42,7 +42,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description="Windsurf Playbook - The AI-Powered Developer Guideline. Learn how to use Windsurf IDE with Cascade AI agent for productive development."
     >
       <HomepageHeader />
       <main>
