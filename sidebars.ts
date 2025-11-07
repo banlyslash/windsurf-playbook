@@ -55,6 +55,14 @@ const sidebars: SidebarsConfig = {
         "productivity-tools/mcp",
       ],
     },
+    {
+      type: "category",
+      label: "Use Cases",
+      items: [
+        "use-cases/from-requirement-to-code",
+        "use-cases/prompt-engineering-for-coding",
+      ],
+    },
 
     "caution",
     "stuff-you-should-know",
