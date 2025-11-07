@@ -98,10 +98,3 @@ It provides a **structured framework for collaboration** with Cascade — helpin
 - 📘 [Full Documentation](https://docs.windsurf.com/plugins/cascade/planning-mode)
 
 ---
-
-## Prompt Engineering Best Practices
-
-*(Section placeholder — content abbreviated in original source)*
-
----
-
