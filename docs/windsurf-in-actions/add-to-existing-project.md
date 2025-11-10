@@ -792,7 +792,7 @@ Keep these prompts in a shared `windsurf-prompts.md` file for the team. This is 
 ## 4. Config Windsurf Rules
 
 1. Go to Cascade Panel
-   ![add-to-existing-project-figure-1.png](./add-to-existing-project-figure-1.png)
+   ![add-to-existing-project-figure-1.png](/img/add-to-existing-project-figure-1.png)
 
 2. Click **+ Workspace**
 

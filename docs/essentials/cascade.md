@@ -22,7 +22,7 @@ Cascade is your in‑IDE coding copilot for chat and code edits. It understands 
 
 ## Do’s and Don’ts (Code Quality)
 - **Do** ask for small, atomic changes; review proposed diffs before applying
-- **Do** create a named checkpoint before risky refactors; revert if outcomes regress
+- **Do** create a named checkpoint[^1] before risky refactors; revert if outcomes regress
 - **Do** use Planning Mode for multi‑step changes; keep the plan updated as you learn
 - **Do** pin critical files/specs and use @‑mentions for determinism
 - **Don’t** combine multiple concerns (refactor + feature + cleanup) in one prompt
@@ -38,3 +38,7 @@ Cascade is your in‑IDE coding copilot for chat and code edits. It understands 
 - **Tool calling**: let Cascade search/build/run with terminal/web/MCP tools; press Accept to execute
 - **Stats for nerds**: inspect message stats to debug context usage and tool calls
 - **Reverts**: changes are revertible to a checkpoint; note that revert operations themselves are irreversible
+
+
+[^1]: A named checkpoint is a clearly labeled save point of your work you can return to later. In practice, this is usually a Git commit, tag, or branch created intentionally before risky changes.
+[^2]: By default, Windsurf Indexing will ignore: Paths specified in gitignore, Files in node_modules, Hidden pathnames (starting with ”.”).
