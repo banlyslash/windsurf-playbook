@@ -18,6 +18,7 @@ Windsurf Tab accelerates high‑quality coding by turning your editor into a fas
 - Toggle on Tab to Import and Tab to Jump
 - Optional: Use Clipboard as context for better in‑file and cross‑file suggestions
 - Optional: Highlight code after accept to quickly review changes
+![tab-setting-figure.png](/img/tab-setting-figure.png)
 
 ## Do’s and Don’ts (Code Quality Focus)
 - **Do** accept word‑by‑word for precision on critical logic
@@ -34,7 +35,9 @@ Windsurf Tab accelerates high‑quality coding by turning your editor into a fas
 - **Word‑by‑word accept**: VS Code `Cmd+Right`, JetBrains `Alt+Shift+\\`
 - **Cycle suggestions**: `Alt+]` / `Alt+[`
 - **Tab to Jump**: let Windsurf move the cursor to the next edit site (great for implementing TODO chains)
-- **Tab to Import**: define a symbol first, then press Tab to insert the import while staying in place
+- **Tab to Import**: define a symbol[^1] first, then press Tab to insert the import while staying in place
 - **FIM**: place cursor mid‑line to get surgical completions that preserve surrounding code
 - **Terminal context**: Tab learns from your terminal, enabling relevant code/task suggestions
 - **Clipboard context**: copy sample code/contract, then accept suggestions tailored to it
+
+[^1]: In tooling and compilers, a “symbol” is any named program entity you can refer to, like a function, class, variable, type, or constant (e.g., useState, Path, MyClass).
