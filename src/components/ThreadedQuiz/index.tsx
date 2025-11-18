@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import styles from './styles.module.css';
 
 export interface QuizQuestion {
@@ -13,15 +13,47 @@ interface ThreadedQuizProps {
   questions: QuizQuestion[];
   title?: string;
   showCategories?: boolean;
+  randomize?: boolean; // Whether to randomize question order
+  maxQuestions?: number; // Maximum number of questions to show (randomly selected if randomize is true)
 }
+
+// Fisher-Yates shuffle algorithm
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
 
 export default function ThreadedQuiz({ 
   questions, 
   title = 'Quiz', 
-  showCategories = true 
+  showCategories = true,
+  randomize = false,
+  maxQuestions
 }: ThreadedQuizProps): React.ReactElement {
+  // State used to force re-randomization on reset
+  const [shuffleKey, setShuffleKey] = useState(0);
+
+  // Memoize the question selection and randomization
+  const displayedQuestions = useMemo(() => {
+    let processedQuestions = [...questions];
+    
+    if (randomize) {
+      processedQuestions = shuffleArray(processedQuestions);
+    }
+    
+    if (maxQuestions && maxQuestions < processedQuestions.length) {
+      processedQuestions = processedQuestions.slice(0, maxQuestions);
+    }
+    
+    return processedQuestions;
+  }, [questions, randomize, maxQuestions, shuffleKey]);
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [selectedAnswers, setSelectedAnswers] = useState<number[]>(Array(questions.length).fill(-1));
+  const [selectedAnswers, setSelectedAnswers] = useState<number[]>(Array(displayedQuestions.length).fill(-1));
   const [showResults, setShowResults] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
 
@@ -34,7 +66,7 @@ export default function ThreadedQuiz({
   };
 
   const handleNext = () => {
-    if (currentQuestion < questions.length - 1) {
+    if (currentQuestion < displayedQuestions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setShowExplanation(false);
     } else {
@@ -50,30 +82,36 @@ export default function ThreadedQuiz({
   };
 
   const handleReset = () => {
+    // Bump shuffle key to force re-randomization
+    setShuffleKey((prev) => prev + 1);
+
     setCurrentQuestion(0);
-    setSelectedAnswers(Array(questions.length).fill(-1));
+    // Length stays the same (maxQuestions), but content will be reshuffled
+    setSelectedAnswers(Array(displayedQuestions.length).fill(-1));
     setShowResults(false);
     setShowExplanation(false);
   };
 
   const calculateScore = () => {
     return selectedAnswers.reduce((score, answer, index) => {
-      return answer === questions[index].correctAnswer ? score + 1 : score;
+      const question = displayedQuestions[index];
+      if (!question) return score;
+      return answer === question.correctAnswer ? score + 1 : score;
     }, 0);
   };
 
   const score = calculateScore();
-  const currentQuestionData = questions[currentQuestion];
+  const currentQuestionData = displayedQuestions[currentQuestion];
   const isAnswered = selectedAnswers[currentQuestion] !== -1;
   const isCorrect = selectedAnswers[currentQuestion] === currentQuestionData.correctAnswer;
 
   // Group questions by category for the progress indicator
   const categories = showCategories 
-    ? [...new Set(questions.map(q => q.category || 'General'))]
+    ? [...new Set(displayedQuestions.map(q => q.category || 'General'))]
     : [];
   
   const getCategoryForQuestion = (index: number) => {
-    return questions[index].category || 'General';
+    return displayedQuestions[index].category || 'General';
   };
 
   const getCurrentCategory = () => {
@@ -82,14 +120,14 @@ export default function ThreadedQuiz({
 
   const getQuestionsInCurrentCategory = () => {
     const currentCategory = getCurrentCategory();
-    return questions.filter(q => (q.category || 'General') === currentCategory);
+    return displayedQuestions.filter(q => (q.category || 'General') === currentCategory);
   };
 
   const getQuestionNumberInCategory = () => {
     const currentCategory = getCurrentCategory();
     let count = 0;
     for (let i = 0; i <= currentQuestion; i++) {
-      if ((questions[i].category || 'General') === currentCategory) {
+      if ((displayedQuestions[i].category || 'General') === currentCategory) {
         count++;
       }
     }
@@ -108,7 +146,7 @@ export default function ThreadedQuiz({
         <div className={styles.questionContainer}>
           <div className={styles.questionHeader}>
             <span className={styles.questionNumber}>
-              Question {currentQuestion + 1} of {questions.length}
+              Question {currentQuestion + 1} of {displayedQuestions.length}
               {showCategories && (
                 <span className={styles.categoryBadge}>
                   {getCurrentCategory()} ({getQuestionNumberInCategory()} of {getTotalQuestionsInCategory()})
@@ -118,7 +156,7 @@ export default function ThreadedQuiz({
             <div className={styles.progressBar}>
               <div 
                 className={styles.progressFill} 
-                style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
+                style={{ width: `${((currentQuestion + 1) / displayedQuestions.length) * 100}%` }}
               />
             </div>
           </div>
@@ -173,7 +211,7 @@ export default function ThreadedQuiz({
               onClick={handleNext}
               disabled={!isAnswered}
             >
-              {currentQuestion === questions.length - 1 ? 'Finish' : 'Next'}
+              {currentQuestion === displayedQuestions.length - 1 ? 'Finish' : 'Next'}
             </button>
           </div>
         </div>
@@ -182,9 +220,9 @@ export default function ThreadedQuiz({
           <h3 className={styles.resultsTitle}>Quiz Results</h3>
           <div className={styles.scoreContainer}>
             <p className={styles.score}>
-              You scored {score} out of {questions.length}
+              You scored {score} out of {displayedQuestions.length}
               <span className={styles.percentage}>
-                ({Math.round((score / questions.length) * 100)}%)
+                ({Math.round((score / displayedQuestions.length) * 100)}%)
               </span>
             </p>
             
@@ -193,9 +231,9 @@ export default function ThreadedQuiz({
                 <h4>Performance by Category:</h4>
                 <ul>
                   {categories.map(category => {
-                    const categoryQuestions = questions.filter(q => (q.category || 'General') === category);
+                    const categoryQuestions = displayedQuestions.filter(q => (q.category || 'General') === category);
                     const categoryCorrect = categoryQuestions.reduce((count, q, index) => {
-                      const questionIndex = questions.findIndex(question => question === q);
+                      const questionIndex = displayedQuestions.findIndex(question => question === q);
                       return selectedAnswers[questionIndex] === q.correctAnswer ? count + 1 : count;
                     }, 0);
                     const categoryPercentage = Math.round((categoryCorrect / categoryQuestions.length) * 100);
