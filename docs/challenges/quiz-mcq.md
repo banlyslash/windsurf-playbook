@@ -11,6 +11,8 @@ Each topic has 3–5 easy questions to reflect on key concepts. Test your knowle
 <ThreadedQuiz 
   title="Windsurf Basic Concepts Quiz" 
   showCategories={true}
+  randomize={true}
+  maxQuestions={2}
   questions={[
     // Tab Features
     {
@@ -466,6 +468,184 @@ Each topic has 3–5 easy questions to reflect on key concepts. Test your knowle
       ],
       correctAnswer: 1,
       explanation: "To use specialties effectively, match the model to the task stage (Plan → Implement → Review), leveraging each model's strengths at the appropriate phase."
+    },
+    
+    // Web Search
+    {
+      category: "Web Search",
+      question: "How do you force a real-time web search in Cascade?",
+      options: [
+        "Use @search",
+        "Use @web",
+        "Use @internet",
+        "Use @google"
+      ],
+      correctAnswer: 1,
+      explanation: "You can force a real-time web search by using @web in your message to Cascade."
+    },
+    {
+      category: "Web Search",
+      question: "What type of websites parse most reliably with web search?",
+      options: [
+        "Social media sites",
+        "Documentation sites, StackOverflow, and GitHub files",
+        "Video streaming platforms",
+        "E-commerce sites"
+      ],
+      correctAnswer: 1,
+      explanation: "Documentation sites, blog posts, StackOverflow, and GitHub files tend to parse more reliably than other types of websites."
+    },
+    {
+      category: "Web Search",
+      question: "What happens when you paste a URL directly into Cascade?",
+      options: [
+        "It's ignored",
+        "Cascade reads the page contents",
+        "It opens in a browser",
+        "It creates a bookmark"
+      ],
+      correctAnswer: 1,
+      explanation: "When you paste a URL directly into your message, Cascade will read the page contents to provide context."
+    },
+    
+    // Prompt Engineering
+    {
+      category: "Prompt Engineering",
+      question: "What should an effective coding prompt include?",
+      options: [
+        "Only the code snippet",
+        "Context, goal, current state, specific request, and constraints",
+        "Just the error message",
+        "Only the desired outcome"
+      ],
+      correctAnswer: 1,
+      explanation: "An effective coding prompt should include context, goal, current state, specific request, constraints/requirements, and examples when applicable."
+    },
+    {
+      category: "Prompt Engineering",
+      question: "Which is an example of a vague prompt anti-pattern?",
+      options: [
+        "\"Fix my code.\"",
+        "\"My React component throws this error when clicking submit. Here's the code and error...\"",
+        "\"Refactor this code to use ES6+ syntax and improve naming\"",
+        "\"Write Jest tests covering valid and invalid email formats\""
+      ],
+      correctAnswer: 0,
+      explanation: "\"Fix my code\" is a vague prompt anti-pattern. Good prompts provide specific context, error messages, and clear questions."
+    },
+    
+    // Project Management
+    {
+      category: "Project Management",
+      question: "What happens to Cascade's memory over time?",
+      options: [
+        "It remains perfectly intact",
+        "It fades, making early context blur",
+        "It gets automatically backed up",
+        "It improves with each conversation"
+      ],
+      correctAnswer: 1,
+      explanation: "Cascade's memory fades over time, making early context blur. It's recommended to refresh context before major changes."
+    },
+    {
+      category: "Project Management",
+      question: "What's the recommended approach for using multiple Windsurf windows?",
+      options: [
+        "Use as many as needed",
+        "Avoid it - it can cause unexpected behavior",
+        "Always use at least two",
+        "It's required for large projects"
+      ],
+      correctAnswer: 1,
+      explanation: "Using multiple Windsurf windows is not recommended as it can confuse Windsurf and lead to unexpected issues like being unable to edit files."
+    },
+    {
+      category: "Project Management",
+      question: "How can you export a Cascade conversation?",
+      options: [
+        "Copy and paste manually",
+        "Use 'Download Trajectory' in Cascade action menu",
+        "Use the export API",
+        "Conversations cannot be exported"
+      ],
+      correctAnswer: 1,
+      explanation: "You can export conversations as markdown using the 'Download Trajectory' option in the Cascade action menu."
+    },
+    
+    // Project Initialization
+    {
+      category: "Project Initialization",
+      question: "What should you do first when initializing a new project?",
+      options: [
+        "Use Windsurf to generate everything",
+        "Manually initialize using the framework's official CLI",
+        "Copy from another project",
+        "Start with Cascade Code"
+      ],
+      correctAnswer: 1,
+      explanation: "You should manually initialize the project using the framework's official CLI or recommended method, without using Windsurf in this stage."
+    },
+    {
+      category: "Project Initialization",
+      question: "Where should project-specific coding conventions be stored?",
+      options: [
+        "In README.md only",
+        "In convention.md file",
+        "In package.json",
+        "In .gitignore"
+      ],
+      correctAnswer: 1,
+      explanation: "Project-specific coding conventions should be stored in a convention.md file as the single source of truth for coding standards."
+    },
+    {
+      category: "Project Initialization",
+      question: "What file naming convention is recommended for components?",
+      options: [
+        "kebab-case",
+        "PascalCase",
+        "snake_case",
+        "camelCase"
+      ],
+      correctAnswer: 1,
+      explanation: "Components should use PascalCase naming convention, while utilities use camelCase and config files use kebab-case."
+    },
+    
+    // Best Practices
+    {
+      category: "Best Practices",
+      question: "Why should you be cautious about generating documentation with AI?",
+      options: [
+        "It's always inaccurate",
+        "It's resource-intensive and costly",
+        "It's not supported",
+        "It requires special permissions"
+      ],
+      correctAnswer: 1,
+      explanation: "Generating documentation is resource-intensive and costly. It's recommended to enforce rules to avoid unnecessary text generation."
+    },
+    {
+      category: "Best Practices",
+      question: "What should you do before making major changes to refresh Cascade's context?",
+      options: [
+        "Restart Windsurf",
+        "Ask Cascade to clarify relevant content",
+        "Clear all memories",
+        "Switch models"
+      ],
+      correctAnswer: 1,
+      explanation: "Since Cascade's memory fades over time, it's recommended to ask Cascade to clarify relevant content before making major changes."
+    },
+    {
+      category: "Best Practices",
+      question: "What's a useful feature for @-mentioning files or folders?",
+      options: [
+        "You can only type mentions manually",
+        "You can drag and drop files or folders to @-mention them",
+        "Mentions don't work with folders",
+        "@-mentions are deprecated"
+      ],
+      correctAnswer: 1,
+      explanation: "You can drag and drop files or folders to @-mention them, which is easier than typing mentions manually."
     }
   ]} 
 />

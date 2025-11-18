@@ -11,6 +11,8 @@ Scenario-style questions to check deeper understanding. Test your knowledge with
 <ThreadedQuiz 
   title="Windsurf Advanced Scenarios Quiz" 
   showCategories={true}
+  randomize={true}
+  maxQuestions={36}
   questions={[
     // Tab Features
     {
@@ -466,6 +468,188 @@ Scenario-style questions to check deeper understanding. Test your knowledge with
       ],
       correctAnswer: 1,
       explanation: "The best practice is to match models to task stages: Plan with Claude/GPT-high, Implement with SWE-1/GPT-5-Codex, and Review with Claude."
+    },
+    
+    // Web Search Advanced
+    {
+      category: "Web Search",
+      question: "You need to reference official API documentation for a specific framework. Best approach?",
+      options: [
+        "Use @web with generic search",
+        "Use @docs with the documentation URL",
+        "Copy-paste from browser",
+        "Rely on Cascade's training data only"
+      ],
+      correctAnswer: 1,
+      explanation: "@docs is specifically designed for high-quality documentation search and works best with official documentation that has predictable formatting."
+    },
+    {
+      category: "Web Search",
+      question: "Why might some websites fail to parse correctly with web search?",
+      options: [
+        "All websites parse perfectly",
+        "Heavy JavaScript, paywalls, or login requirements can prevent parsing",
+        "Only HTTP sites work",
+        "Web search doesn't support HTTPS"
+      ],
+      correctAnswer: 1,
+      explanation: "Some websites with heavy JavaScript, paywalls, or login requirements may not parse well with web search tools."
+    },
+    
+    // Prompt Engineering Advanced
+    {
+      category: "Prompt Engineering",
+      question: "You're debugging a complex production issue. What information should you include?",
+      options: [
+        "Just say \"it's broken\"",
+        "Framework, specific metrics, when issue started, relevant code, and ask for causes and solutions",
+        "Only the error message",
+        "Just the code snippet"
+      ],
+      correctAnswer: 1,
+      explanation: "For production debugging, include framework/architecture, specific performance metrics, when the issue started, relevant code, and ask for both causes and solutions."
+    },
+    {
+      category: "Prompt Engineering",
+      question: "What's the benefit of role-based prompting?",
+      options: [
+        "It makes prompts longer",
+        "It enhances expertise by asking AI to adopt a specific role (e.g., 'Act as a security expert')",
+        "It's just for fun",
+        "It slows down responses"
+      ],
+      correctAnswer: 1,
+      explanation: "Role-based prompting enhances the quality of specialized advice by asking the AI to adopt a specific role like 'security expert' or 'code reviewer'."
+    },
+    
+    // Project Workflows
+    {
+      category: "Project Workflows",
+      question: "In the Jira Revo AI + Windsurf workflow, which phase uses Windsurf's planning mode?",
+      options: [
+        "Analysis phase",
+        "Context gathering phase",
+        "Planning phase",
+        "Requirement phase"
+      ],
+      correctAnswer: 2,
+      explanation: "The Planning phase uses Windsurf's planning mode to break down implementation into detailed tasks after gathering context from Jira Revo AI."
+    },
+    {
+      category: "Project Workflows",
+      question: "When adding Windsurf to an existing project, what's the first critical step?",
+      options: [
+        "Start coding immediately",
+        "Analyze the project to create rules that prevent Cascade from changing existing code style",
+        "Delete all existing code",
+        "Switch to a new framework"
+      ],
+      correctAnswer: 1,
+      explanation: "The first critical step is to analyze the project and create rules to ensure Cascade doesn't change existing code style or break current features."
+    },
+    {
+      category: "Project Workflows",
+      question: "How long does local indexing typically take for a new workspace?",
+      options: [
+        "Instant",
+        "5 to 10 minutes",
+        "1 hour",
+        "24 hours"
+      ],
+      correctAnswer: 1,
+      explanation: "Local indexing for a new workspace typically takes approximately 5 to 10 minutes before you can fully utilize Windsurf's features."
+    },
+    
+    // Advanced Project Management
+    {
+      category: "Project Workflows",
+      question: "When creating rules for an existing project, which model type is recommended?",
+      options: [
+        "Fast models only",
+        "Thinking models like Claude Sonnet 4.5 Thinking",
+        "Any model works the same",
+        "0-credit models"
+      ],
+      correctAnswer: 1,
+      explanation: "When analyzing projects to create rules, it's recommended to use thinking models like Claude Sonnet 4.5 Thinking for better analysis quality."
+    },
+    {
+      category: "Project Workflows",
+      question: "What's the purpose of creating a convention.md file?",
+      options: [
+        "To store API keys",
+        "To serve as single source of truth for coding standards and prevent style inconsistencies",
+        "To replace documentation",
+        "To store git history"
+      ],
+      correctAnswer: 1,
+      explanation: "The convention.md file serves as the single source of truth for coding standards, preventing Cascade from changing existing code style."
+    },
+    
+    // Advanced Prompt Engineering
+    {
+      category: "Prompt Engineering",
+      question: "For test-driven development, what's the recommended prompt approach?",
+      options: [
+        "Write code first, then tests",
+        "Ask to write tests first that verify requirements, then implement code that passes tests",
+        "Skip testing entirely",
+        "Only write integration tests"
+      ],
+      correctAnswer: 1,
+      explanation: "For TDD, the recommended approach is to ask AI to write tests first that verify requirements, then implement the code that passes all tests."
+    },
+    {
+      category: "Prompt Engineering",
+      question: "When requesting a refactor, what makes the prompt most effective?",
+      options: [
+        "Just say 'make it better'",
+        "List specific goals (ES6+, array methods, naming) and ask for explanations",
+        "Only provide the code",
+        "Ask for complete rewrite"
+      ],
+      correctAnswer: 1,
+      explanation: "Effective refactoring prompts list specific goals (like ES6+ syntax, array methods, naming improvements) and request explanations of the changes."
+    },
+    
+    // Advanced Web Search
+    {
+      category: "Web Search",
+      question: "What happens during web page reading in Windsurf?",
+      options: [
+        "Pages are sent to external servers",
+        "Page reads happen on your device within your network",
+        "Only text is extracted",
+        "Images are downloaded separately"
+      ],
+      correctAnswer: 1,
+      explanation: "Page reads happen entirely on your device within your network, so VPN usage doesn't cause issues."
+    },
+    {
+      category: "Web Search",
+      question: "How does Cascade handle long web pages?",
+      options: [
+        "Reads everything at once",
+        "Breaks content into chunks and reads relevant sections",
+        "Ignores long pages",
+        "Only reads the first paragraph"
+      ],
+      correctAnswer: 1,
+      explanation: "For long pages, Windsurf breaks content into multiple chunks and reads specific relevant sections, similar to how a human would skim."
+    },
+    
+    // Integration Scenarios
+    {
+      category: "Integration Scenarios",
+      question: "In the Jira Revo AI + Windsurf workflow, what should you do in the Review phase?",
+      options: [
+        "Skip review and deploy",
+        "Conduct self-review with Windsurf checking quality, tests, and documentation",
+        "Only check syntax",
+        "Let others review without preparation"
+      ],
+      correctAnswer: 1,
+      explanation: "In the Review phase, conduct a self-review with Windsurf to check code quality, test coverage, and documentation completeness before creating a pull request."
     }
   ]} 
 />
