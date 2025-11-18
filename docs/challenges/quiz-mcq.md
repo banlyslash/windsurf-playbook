@@ -12,7 +12,7 @@ Each topic has 3–5 easy questions to reflect on key concepts. Test your knowle
   title="Windsurf Basic Concepts Quiz" 
   showCategories={true}
   randomize={true}
-  maxQuestions={2}
+  maxQuestions={36}
   questions={[
     // Tab Features
     {
