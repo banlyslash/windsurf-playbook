@@ -53,6 +53,7 @@ const sidebars: SidebarsConfig = {
         "productivity-tools/at-mention-tools",
         "productivity-tools/web-search-guide",
         "productivity-tools/mcp",
+        "productivity-tools/mcp-workflow-integration",
       ],
     },
     {
