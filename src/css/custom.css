@@ -1,66 +1,517 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Slash Professional Theme
+ * Brand colors inspired by Slash Company (slash.co)
+ * Orange: Innovation & Energy | Blue: Trust & Professionalism | Cyan: Tech & Digital
  */
 
-/* You can override the default Infima variables here. */
+/* Light Mode - Slash Professional */
 :root {
-  --ifm-color-primary: #0078d4;
-  --ifm-color-primary-dark: #006cbe;
-  --ifm-color-primary-darker: #0066b3;
-  --ifm-color-primary-darkest: #005494;
-  --ifm-color-primary-light: #0084ea;
-  --ifm-color-primary-lighter: #008af5;
-  --ifm-color-primary-lightest: #1a9aff;
+  /* Primary - Vibrant Orange (Slash brand energy) */
+  --ifm-color-primary: #FF6B35;
+  --ifm-color-primary-dark: #ff5419;
+  --ifm-color-primary-darker: #ff4709;
+  --ifm-color-primary-darkest: #e63d00;
+  --ifm-color-primary-light: #ff8251;
+  --ifm-color-primary-lighter: #ff8f61;
+  --ifm-color-primary-lightest: #ffb08d;
+  
+  /* Secondary - Deep Blue (AWS partnership, trust) */
+  --ifm-color-secondary: #004E89;
+  --ifm-color-secondary-dark: #00437a;
+  --ifm-color-secondary-darker: #003d6b;
+  --ifm-color-secondary-light: #005998;
+  --ifm-color-secondary-lighter: #0066b3;
+  
+  /* Accent - Cyan (Tech, digital transformation) */
+  --ifm-color-accent: #00D9FF;
+  --ifm-color-accent-dark: #00c2e6;
+  --ifm-color-accent-light: #33e0ff;
+  
+  /* Success - Emerald (Positive outcomes) */
+  --ifm-color-success: #10b981;
+  --ifm-color-success-dark: #059669;
+  --ifm-color-success-light: #34d399;
+  
+  /* Warning - Amber */
+  --ifm-color-warning: #f59e0b;
+  
+  /* Danger - Red */
+  --ifm-color-danger: #ef4444;
+  
+  /* Typography */
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-line-height-base: 1.8;
+  
+  /* Spacing */
+  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-spacing-vertical: 1.5rem;
+  
+  /* Code blocks */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 107, 53, 0.1);
+  
+  /* Backgrounds */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f8f9fa;
+  
+  /* Borders */
+  --ifm-global-border-width: 1px;
+  --ifm-global-radius: 6px;
+  
+  /* Shadows */
+  --ifm-global-shadow-lw: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --ifm-global-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ifm-global-shadow-tl: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark Mode - Slash Professional */
 [data-theme='dark'] {
-  --ifm-color-primary: #4cc2ff;
-  --ifm-color-primary-dark: #2cb7ff;
-  --ifm-color-primary-darker: #1cb2ff;
-  --ifm-color-primary-darkest: #0095e9;
-  --ifm-color-primary-light: #6ccdff;
-  --ifm-color-primary-lighter: #7cd2ff;
-  --ifm-color-primary-lightest: #abe3ff;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Primary - Softer Orange */
+  --ifm-color-primary: #FF8C61;
+  --ifm-color-primary-dark: #ff7a47;
+  --ifm-color-primary-darker: #ff6e3d;
+  --ifm-color-primary-darkest: #ff4f19;
+  --ifm-color-primary-light: #ff9e7b;
+  --ifm-color-primary-lighter: #ffaa85;
+  --ifm-color-primary-lightest: #ffc8a9;
+  
+  /* Secondary - Brighter Blue */
+  --ifm-color-secondary: #0066B3;
+  --ifm-color-secondary-dark: #005a9e;
+  --ifm-color-secondary-darker: #004e89;
+  --ifm-color-secondary-light: #0072c8;
+  --ifm-color-secondary-lighter: #007edd;
+  
+  /* Accent - Bright Cyan */
+  --ifm-color-accent: #33E0FF;
+  --ifm-color-accent-dark: #00d9ff;
+  --ifm-color-accent-light: #66e8ff;
+  
+  /* Success */
+  --ifm-color-success: #34d399;
+  --ifm-color-success-dark: #10b981;
+  --ifm-color-success-light: #6ee7b7;
+  
+  /* Backgrounds */
+  --ifm-background-color: #0a0a0a;
+  --ifm-background-surface-color: #1a1a1a;
+  
+  /* Code blocks */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 140, 97, 0.15);
+  
+  /* Text colors */
+  --ifm-font-color-base: #f5f5f5;
+  --ifm-color-emphasis-300: #d1d5db;
+  --ifm-color-emphasis-600: #6b7280;
+  --ifm-color-emphasis-800: #374151;
 }
 
-/* Custom styles for Windsurf documentation */
+/* Custom styles for Windsurf documentation - Clean & Readable */
 .markdown h1 {
   font-weight: 700;
+  color: var(--ifm-font-color-base);
 }
 
 .markdown h2 {
   margin-top: 2rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
 }
 
 .markdown h3 {
   margin-top: 1.5rem;
+  color: var(--ifm-font-color-base);
 }
 
 .markdown ul li,
 .markdown ol li {
   margin: 0.5rem 0;
+  line-height: 1.8;
 }
 
 .markdown code {
   background-color: var(--ifm-color-emphasis-100);
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
+  font-weight: 400;
 }
 
 .markdown blockquote {
-  border-left: 4px solid var(--ifm-color-primary);
+  border-left: 4px solid var(--ifm-color-emphasis-300);
   background-color: var(--ifm-color-emphasis-100);
-  padding: 1rem;
-  margin: 1rem 0;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
   border-radius: 0 4px 4px 0;
+}
+
+/* Enhanced buttons with Slash branding */
+.button--primary {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  border: none;
+  transition: all 150ms ease-in-out;
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-global-shadow-tl);
+}
+
+.button--secondary {
+  border: 2px solid var(--ifm-color-secondary);
+  color: var(--ifm-color-secondary);
+  background: transparent;
+  transition: all 150ms ease-in-out;
+}
+
+.button--secondary:hover {
+  background: var(--ifm-color-secondary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Sidebar active item - Subtle accent */
+.menu__link--active {
+  background-color: var(--ifm-color-emphasis-100);
+  border-left: 3px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* Links - Clean and readable */
+.markdown a {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: all 150ms ease-in-out;
+}
+
+.markdown a:hover {
+  text-decoration-color: var(--ifm-color-primary);
+}
+
+/* Code blocks - Clean styling */
+.prism-code {
+  border-radius: 6px;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+/* Cards and containers - Subtle */
+.card {
+  border-radius: 8px;
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all 150ms ease-in-out;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.card:hover {
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+/* Badges - Clean style */
+.badge {
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.badge--primary {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.badge--secondary {
+  background: var(--ifm-color-secondary);
+  color: white;
+}
+
+.badge--success {
+  background: var(--ifm-color-success);
+  color: white;
+}
+
+/* Tables - Clean and readable */
+.markdown table {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.markdown table tr:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.markdown table th {
+  background-color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
+  font-weight: 600;
+}
+
+/* Admonitions - Subtle */
+.admonition {
+  border-radius: 6px;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+/* Search bar accent */
+.navbar__search-input {
+  border: 2px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  transition: all 150ms ease-in-out;
+}
+
+.navbar__search-input:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+/* Navbar gradient background */
+.navbar {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-secondary) 100%);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.navbar__title,
+.navbar__link,
+.navbar__item {
+  color: white !important;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--ifm-color-accent) !important;
+}
+
+/* Dark mode navbar adjustments */
+[data-theme='dark'] .navbar {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-secondary) 100%);
+}
+
+/* Homepage header gradient background */
+.hero--primary {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-secondary) 50%, var(--ifm-color-accent) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero--primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 217, 255, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero--primary .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__title,
+.hero__subtitle {
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Make sure hero title doesn't have gradient text on homepage */
+.hero--primary .hero__title {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: white !important;
+  background-clip: unset !important;
+}
+
+/* Hero Get Started button - stands out on gradient background */
+.hero--primary .button--secondary {
+  background: white;
+  color: var(--ifm-color-primary);
+  border: 3px solid white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.875rem 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 200ms ease-in-out;
+}
+
+.hero--primary .button--secondary:hover {
+  background: var(--ifm-color-accent);
+  color: white;
+  border-color: var(--ifm-color-accent);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 217, 255, 0.4);
+}
+
+/* Hero title container - responsive layout */
+.hero__title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.hero__logo {
+  height: 40px;
+  width: auto;
+}
+
+.hero--primary .hero__title {
+  margin: 0;
+  font-size: 3rem;
+}
+
+/* Mobile view - Stack logo and title vertically */
+@media screen and (max-width: 996px) {
+  .hero__title-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .hero__logo {
+    height: 32px;
+  }
+  
+  .hero--primary .hero__title {
+    font-size: 2rem;
+  }
+  
+  .hero--primary .button--secondary {
+    margin: 0 1rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Tablet view - Adjust sizes */
+@media screen and (min-width: 997px) and (max-width: 1280px) {
+  .hero__logo {
+    height: 36px;
+  }
+  
+  .hero--primary .hero__title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Feature cards on homepage */
+.feature-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 200ms ease-in-out;
+  border: 2px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-background-color);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--ifm-color-primary);
+}
+
+.feature-card .card__header {
+  padding: 2rem 1rem 1rem;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(0, 78, 137, 0.05) 100%);
+  border-bottom: 2px solid var(--ifm-color-emphasis-100);
+}
+
+.feature-card .card__body {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.feature-card h3 {
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: var(--ifm-font-color-base);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Dark mode feature cards */
+[data-theme='dark'] .feature-card {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .feature-card:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+/* Footer with Slash branding */
+.footer {
+  background: linear-gradient(135deg, var(--ifm-color-secondary) 0%, var(--ifm-color-primary) 100%);
+  color: white;
+  padding: 3rem 0 2rem;
+  border-top: 3px solid var(--ifm-color-accent);
+}
+
+.footer__title {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer__item {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer__link-item {
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 150ms ease-in-out;
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-accent);
+  text-decoration: none;
+  transform: translateX(4px);
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer__logo {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+/* Footer social icons */
+.footer a[href*="github"],
+.footer a[href*="twitter"],
+.footer a[href*="linkedin"] {
+  color: white;
+  transition: all 150ms ease-in-out;
+}
+
+.footer a[href*="github"]:hover,
+.footer a[href*="twitter"]:hover,
+.footer a[href*="linkedin"]:hover {
+  color: var(--ifm-color-accent);
+  transform: scale(1.2);
+}
+
+/* Dark mode footer adjustments */
+[data-theme='dark'] .footer {
+  background: linear-gradient(135deg, var(--ifm-color-secondary) 0%, var(--ifm-color-primary) 100%);
 }
 
 .mt-4 {
