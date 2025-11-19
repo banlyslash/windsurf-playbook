@@ -107,25 +107,22 @@
   --ifm-color-emphasis-800: #374151;
 }
 
-/* Custom styles for Windsurf documentation - Slash branded */
+/* Custom styles for Windsurf documentation - Clean & Readable */
 .markdown h1 {
   font-weight: 700;
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--ifm-font-color-base);
 }
 
 .markdown h2 {
   margin-top: 2rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--ifm-color-primary);
-  color: var(--ifm-color-secondary);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
 }
 
 .markdown h3 {
   margin-top: 1.5rem;
-  color: var(--ifm-color-primary);
+  color: var(--ifm-font-color-base);
 }
 
 .markdown ul li,
@@ -137,19 +134,18 @@
 .markdown code {
   background-color: var(--ifm-color-emphasis-100);
   padding: 0.2rem 0.4rem;
-  border-radius: 6px;
+  border-radius: 4px;
   border: 1px solid var(--ifm-color-emphasis-200);
-  color: var(--ifm-color-primary);
-  font-weight: 500;
+  color: var(--ifm-font-color-base);
+  font-weight: 400;
 }
 
 .markdown blockquote {
-  border-left: 4px solid var(--ifm-color-primary);
-  background: linear-gradient(90deg, rgba(255, 107, 53, 0.05) 0%, transparent 100%);
+  border-left: 4px solid var(--ifm-color-emphasis-300);
+  background-color: var(--ifm-color-emphasis-100);
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
-  border-radius: 0 6px 6px 0;
-  box-shadow: var(--ifm-global-shadow-lw);
+  border-radius: 0 4px 4px 0;
 }
 
 /* Enhanced buttons with Slash branding */
@@ -178,66 +174,54 @@
   transform: translateY(-2px);
 }
 
-/* Sidebar active item - Orange accent */
+/* Sidebar active item - Subtle accent */
 .menu__link--active {
-  background: linear-gradient(90deg, rgba(255, 107, 53, 0.1) 0%, transparent 100%);
+  background-color: var(--ifm-color-emphasis-100);
   border-left: 3px solid var(--ifm-color-primary);
   color: var(--ifm-color-primary);
   font-weight: 600;
 }
 
-/* Links with cyan hover */
+/* Links - Clean and readable */
 .markdown a {
-  color: var(--ifm-color-secondary);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  text-decoration-color: transparent;
   transition: all 150ms ease-in-out;
 }
 
 .markdown a:hover {
-  color: var(--ifm-color-accent);
-  border-bottom-color: var(--ifm-color-accent);
+  text-decoration-color: var(--ifm-color-primary);
 }
 
-/* Code blocks with orange highlights */
+/* Code blocks - Clean styling */
 .prism-code {
   border-radius: 6px;
-  box-shadow: var(--ifm-global-shadow-md);
+  box-shadow: var(--ifm-global-shadow-lw);
 }
 
-.token.keyword,
-.token.important {
-  color: var(--ifm-color-primary) !important;
-}
-
-.token.function {
-  color: var(--ifm-color-accent) !important;
-}
-
-/* Cards and containers */
+/* Cards and containers - Subtle */
 .card {
   border-radius: 8px;
-  box-shadow: var(--ifm-global-shadow-md);
+  box-shadow: var(--ifm-global-shadow-lw);
   transition: all 150ms ease-in-out;
   border: 1px solid var(--ifm-color-emphasis-200);
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--ifm-global-shadow-tl);
-  border-color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-md);
 }
 
-/* Badges - Slash style */
+/* Badges - Clean style */
 .badge {
-  border-radius: 12px;
+  border-radius: 4px;
   padding: 0.25rem 0.75rem;
   font-weight: 600;
   font-size: 0.875rem;
 }
 
 .badge--primary {
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  background: var(--ifm-color-primary);
   color: white;
 }
 
@@ -251,7 +235,7 @@
   color: white;
 }
 
-/* Tables with hover effects */
+/* Tables - Clean and readable */
 .markdown table {
   border-radius: 6px;
   overflow: hidden;
@@ -259,23 +243,19 @@
 }
 
 .markdown table tr:hover {
-  background-color: rgba(255, 107, 53, 0.05);
+  background-color: var(--ifm-color-emphasis-100);
 }
 
 .markdown table th {
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-secondary) 100%);
-  color: white;
+  background-color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
   font-weight: 600;
 }
 
-/* Admonitions with Slash colors */
+/* Admonitions - Subtle */
 .admonition {
   border-radius: 6px;
   box-shadow: var(--ifm-global-shadow-lw);
-}
-
-.admonition-icon svg {
-  fill: var(--ifm-color-primary);
 }
 
 /* Search bar accent */
@@ -349,6 +329,189 @@
   -webkit-background-clip: unset !important;
   -webkit-text-fill-color: white !important;
   background-clip: unset !important;
+}
+
+/* Hero Get Started button - stands out on gradient background */
+.hero--primary .button--secondary {
+  background: white;
+  color: var(--ifm-color-primary);
+  border: 3px solid white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.875rem 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 200ms ease-in-out;
+}
+
+.hero--primary .button--secondary:hover {
+  background: var(--ifm-color-accent);
+  color: white;
+  border-color: var(--ifm-color-accent);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 217, 255, 0.4);
+}
+
+/* Hero title container - responsive layout */
+.hero__title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.hero__logo {
+  height: 40px;
+  width: auto;
+}
+
+.hero--primary .hero__title {
+  margin: 0;
+  font-size: 3rem;
+}
+
+/* Mobile view - Stack logo and title vertically */
+@media screen and (max-width: 996px) {
+  .hero__title-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .hero__logo {
+    height: 32px;
+  }
+  
+  .hero--primary .hero__title {
+    font-size: 2rem;
+  }
+  
+  .hero--primary .button--secondary {
+    margin: 0 1rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Tablet view - Adjust sizes */
+@media screen and (min-width: 997px) and (max-width: 1280px) {
+  .hero__logo {
+    height: 36px;
+  }
+  
+  .hero--primary .hero__title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Feature cards on homepage */
+.feature-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 200ms ease-in-out;
+  border: 2px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-background-color);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--ifm-color-primary);
+}
+
+.feature-card .card__header {
+  padding: 2rem 1rem 1rem;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(0, 78, 137, 0.05) 100%);
+  border-bottom: 2px solid var(--ifm-color-emphasis-100);
+}
+
+.feature-card .card__body {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.feature-card h3 {
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: var(--ifm-font-color-base);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Dark mode feature cards */
+[data-theme='dark'] .feature-card {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .feature-card:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+/* Footer with Slash branding */
+.footer {
+  background: linear-gradient(135deg, var(--ifm-color-secondary) 0%, var(--ifm-color-primary) 100%);
+  color: white;
+  padding: 3rem 0 2rem;
+  border-top: 3px solid var(--ifm-color-accent);
+}
+
+.footer__title {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer__item {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer__link-item {
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 150ms ease-in-out;
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-accent);
+  text-decoration: none;
+  transform: translateX(4px);
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer__logo {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+/* Footer social icons */
+.footer a[href*="github"],
+.footer a[href*="twitter"],
+.footer a[href*="linkedin"] {
+  color: white;
+  transition: all 150ms ease-in-out;
+}
+
+.footer a[href*="github"]:hover,
+.footer a[href*="twitter"]:hover,
+.footer a[href*="linkedin"]:hover {
+  color: var(--ifm-color-accent);
+  transform: scale(1.2);
+}
+
+/* Dark mode footer adjustments */
+[data-theme='dark'] .footer {
+  background: linear-gradient(135deg, var(--ifm-color-secondary) 0%, var(--ifm-color-primary) 100%);
 }
 
 .mt-4 {

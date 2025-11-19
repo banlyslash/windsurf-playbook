@@ -13,9 +13,9 @@ function HomepageHeader() {
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
-        <div className="flex items-center space-x-4 justify-center">
+        <div className="hero__title-container">
           <img
-            className="h-[40px] mb-4"
+            className="hero__logo"
             src="img/windsurf-white-wordmark.svg"
             alt="Windsurf"
           />
