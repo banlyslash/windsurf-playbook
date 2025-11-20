@@ -4,15 +4,18 @@ keywords: ["quiz", "advanced scenarios", "Windsurf", "challenge", "learning", "a
 image: "/img/docusaurus-social-card.jpg"
 ---
 
-# Quiz 2: Advanced Scenarios
+# Assessment 2: Advanced Scenarios
 
 Scenario-style questions to check deeper understanding. Test your knowledge with these more challenging scenarios!
 
 <ThreadedQuiz 
-  title="Windsurf Advanced Scenarios Quiz" 
+  title="Windsurf Advanced Scenarios Assessment" 
   showCategories={true}
   randomize={true}
   maxQuestions={36}
+  hideCheckAnswer={true}
+  autoAdvance={true}
+  autoAdvanceDelay={600}
   questions={[
     // Tab Features
     {

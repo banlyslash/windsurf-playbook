@@ -15,6 +15,9 @@ interface ThreadedQuizProps {
   showCategories?: boolean;
   randomize?: boolean; // Whether to randomize question order
   maxQuestions?: number; // Maximum number of questions to show (randomly selected if randomize is true)
+  hideCheckAnswer?: boolean; // Whether to hide the "Check Answer" button
+  autoAdvance?: boolean; // Whether to automatically advance to next question after selection
+  autoAdvanceDelay?: number; // Delay in milliseconds before auto-advancing (default: 800ms)
 }
 
 // Fisher-Yates shuffle algorithm
@@ -32,7 +35,10 @@ export default function ThreadedQuiz({
   title = 'Quiz', 
   showCategories = true,
   randomize = false,
-  maxQuestions
+  maxQuestions,
+  hideCheckAnswer = false,
+  autoAdvance = false,
+  autoAdvanceDelay = 800
 }: ThreadedQuizProps): React.ReactElement {
   // State used to force re-randomization on reset
   const [shuffleKey, setShuffleKey] = useState(0);
@@ -56,6 +62,7 @@ export default function ThreadedQuiz({
   const [selectedAnswers, setSelectedAnswers] = useState<number[]>(Array(displayedQuestions.length).fill(-1));
   const [showResults, setShowResults] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
+  const [isAutoAdvanceEnabled, setIsAutoAdvanceEnabled] = useState(autoAdvance);
 
   const handleAnswerSelect = (optionIndex: number) => {
     if (showResults) return;
@@ -63,6 +70,18 @@ export default function ThreadedQuiz({
     const newSelectedAnswers = [...selectedAnswers];
     newSelectedAnswers[currentQuestion] = optionIndex;
     setSelectedAnswers(newSelectedAnswers);
+
+    // Auto-advance to next question if enabled
+    if (isAutoAdvanceEnabled) {
+      setTimeout(() => {
+        if (currentQuestion < displayedQuestions.length - 1) {
+          setCurrentQuestion(currentQuestion + 1);
+          setShowExplanation(false);
+        } else {
+          setShowResults(true);
+        }
+      }, autoAdvanceDelay);
+    }
   };
 
   const handleNext = () => {
@@ -104,6 +123,25 @@ export default function ThreadedQuiz({
   const currentQuestionData = displayedQuestions[currentQuestion];
   const isAnswered = selectedAnswers[currentQuestion] !== -1;
   const isCorrect = selectedAnswers[currentQuestion] === currentQuestionData.correctAnswer;
+
+  // Get performance feedback based on score percentage
+  const getPerformanceFeedback = () => {
+    const percentage = Math.round((score / displayedQuestions.length) * 100);
+    
+    if (percentage === 100) {
+      return { emoji: '🏆', message: 'Perfect Score!', color: '#FFD700' };
+    } else if (percentage >= 90) {
+      return { emoji: '🌟', message: 'Outstanding!', color: '#4CAF50' };
+    } else if (percentage >= 80) {
+      return { emoji: '🎯', message: 'Excellent Work!', color: '#2196F3' };
+    } else if (percentage >= 70) {
+      return { emoji: '👍', message: 'Good Job!', color: '#FF9800' };
+    } else if (percentage >= 60) {
+      return { emoji: '📚', message: 'Keep Learning!', color: '#9C27B0' };
+    } else {
+      return { emoji: '💪', message: 'Keep Practicing!', color: '#F44336' };
+    }
+  };
 
   // Group questions by category for the progress indicator
   const categories = showCategories 
@@ -182,7 +220,7 @@ export default function ThreadedQuiz({
             ))}
           </div>
           
-          {isAnswered && !showExplanation && (
+          {isAnswered && !showExplanation && !hideCheckAnswer && (
             <button 
               className={styles.checkButton}
               onClick={() => setShowExplanation(true)}
@@ -206,30 +244,58 @@ export default function ThreadedQuiz({
             >
               Previous
             </button>
-            <button
-              className={styles.navButton}
-              onClick={handleNext}
-              disabled={!isAnswered}
-            >
-              {currentQuestion === displayedQuestions.length - 1 ? 'Finish' : 'Next'}
-            </button>
+            <div className={styles.navRight}>
+              {autoAdvance && (
+                <label className={styles.switchContainer}>
+                  <input
+                    type="checkbox"
+                    checked={isAutoAdvanceEnabled}
+                    onChange={(e) => setIsAutoAdvanceEnabled(e.target.checked)}
+                    className={styles.switchInput}
+                  />
+                  <span className={styles.switchSlider}></span>
+                  <span className={styles.switchLabel}>Auto</span>
+                </label>
+              )}
+              <button
+                className={styles.navButton}
+                onClick={handleNext}
+                disabled={!isAnswered}
+              >
+                {currentQuestion === displayedQuestions.length - 1 ? 'Finish' : 'Next'}
+              </button>
+            </div>
           </div>
         </div>
       ) : (
         <div className={styles.resultsContainer}>
-          <h3 className={styles.resultsTitle}>Quiz Results</h3>
-          <div className={styles.scoreContainer}>
-            <p className={styles.score}>
-              You scored {score} out of {displayedQuestions.length}
-              <span className={styles.percentage}>
-                ({Math.round((score / displayedQuestions.length) * 100)}%)
+          <div className={styles.resultsCard}>
+            <h3 className={styles.resultsTitle}>
+              {title.replace('Quiz', 'Assessment')} Results
+            </h3>
+            
+            <div className={styles.performanceBadge}>
+              <span className={styles.performanceEmoji}>{getPerformanceFeedback().emoji}</span>
+              <span className={styles.performanceMessage} style={{ color: getPerformanceFeedback().color }}>
+                {getPerformanceFeedback().message}
               </span>
-            </p>
+            </div>
+            
+            <div className={styles.mainScore}>
+              <div className={styles.scoreCircle}>
+                <span className={styles.scorePercentage}>
+                  {Math.round((score / displayedQuestions.length) * 100)}%
+                </span>
+              </div>
+              <p className={styles.scoreText}>
+                {score} / {displayedQuestions.length} correct
+              </p>
+            </div>
             
             {showCategories && categories.length > 1 && (
               <div className={styles.categoryScores}>
-                <h4>Performance by Category:</h4>
-                <ul>
+                <h4 className={styles.categoryTitle}>Performance by Category</h4>
+                <div className={styles.categoryGrid}>
                   {categories.map(category => {
                     const categoryQuestions = displayedQuestions.filter(q => (q.category || 'General') === category);
                     const categoryCorrect = categoryQuestions.reduce((count, q, index) => {
@@ -239,18 +305,36 @@ export default function ThreadedQuiz({
                     const categoryPercentage = Math.round((categoryCorrect / categoryQuestions.length) * 100);
                     
                     return (
-                      <li key={category} className={styles.categoryScore}>
-                        <span className={styles.categoryName}>{category}:</span> {categoryCorrect}/{categoryQuestions.length} ({categoryPercentage}%)
-                      </li>
+                      <div key={category} className={styles.categoryItem}>
+                        <div className={styles.categoryHeader}>
+                          <span className={styles.categoryName}>{category}</span>
+                          <span className={styles.categoryPercent}>{categoryPercentage}%</span>
+                        </div>
+                        <div className={styles.categoryBar}>
+                          <div 
+                            className={styles.categoryBarFill} 
+                            style={{ width: `${categoryPercentage}%` }}
+                          />
+                        </div>
+                        <span className={styles.categoryCount}>
+                          {categoryCorrect}/{categoryQuestions.length}
+                        </span>
+                      </div>
                     );
                   })}
-                </ul>
+                </div>
               </div>
             )}
+            
+            <div className={styles.resultsFooter}>
+              <p className={styles.timestamp}>
+                Completed: {new Date().toLocaleDateString()} {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+              </p>
+            </div>
           </div>
           
           <button className={styles.resetButton} onClick={handleReset}>
-            Retake Quiz
+            Retake Assessment
           </button>
         </div>
       )}

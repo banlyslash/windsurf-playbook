@@ -3,6 +3,7 @@
   border-radius: 8px;
   padding: 1.5rem;
   margin: 2rem 0;
+  margin-bottom: 200vh;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -122,7 +123,14 @@
 .navigation {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 1.5rem;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .navButton {
@@ -145,86 +153,264 @@
   cursor: not-allowed;
 }
 
+/* Toggle Switch */
+.switchContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.switchInput {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.switchSlider {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  background-color: var(--ifm-color-emphasis-300);
+  border-radius: 24px;
+  transition: background-color 0.3s ease;
+}
+
+.switchSlider::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.switchInput:checked + .switchSlider {
+  background-color: var(--ifm-color-primary);
+}
+
+.switchInput:checked + .switchSlider::before {
+  transform: translateX(20px);
+}
+
+.switchContainer:hover .switchSlider {
+  opacity: 0.9;
+}
+
+.switchLabel {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-700);
+}
+
 .checkButton {
   padding: 0.6rem 1.2rem;
-  background-color: var(--ifm-color-success);
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-weight: 500;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
   align-self: flex-start;
   margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .checkButton:hover {
-  background-color: var(--ifm-color-success-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .resultsContainer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.resultsCard {
+  width: 100%;
+  background-color: var(--ifm-background-color);
+  border-radius: 8px;
   padding: 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--ifm-color-primary);
 }
 
 .resultsTitle {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--ifm-color-primary);
+  text-align: center;
+  font-weight: 600;
 }
 
-.scoreContainer {
-  background-color: var(--ifm-background-color);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+/* Performance Badge */
+.performanceBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: 20px;
 }
 
-.score {
-  font-size: 1.2rem;
-  margin: 0;
+.performanceEmoji {
+  font-size: 1.8rem;
+  line-height: 1;
 }
 
-.percentage {
-  font-weight: bold;
-  margin-left: 0.5rem;
+.performanceMessage {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
-.categoryScores {
-  margin-top: 1.5rem;
-  text-align: left;
-}
-
-.categoryScores h4 {
+/* Main Score Display */
+.mainScore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
   margin-bottom: 0.75rem;
 }
 
-.categoryScores ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.scoreCircle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ifm-color-primary-lightest), var(--ifm-color-primary-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.categoryScore {
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
+.scorePercentage {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--ifm-color-primary-darkest);
+}
+
+.scoreText {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Category Scores */
+.categoryScores {
+  margin-top: 0.25rem;
+}
+
+.categoryTitle {
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--ifm-color-emphasis-800);
+  font-weight: 600;
+  text-align: center;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .categoryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.categoryItem {
   background-color: var(--ifm-color-emphasis-100);
   border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.categoryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
 }
 
 .categoryName {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.categoryPercent {
   font-weight: bold;
-  margin-right: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--ifm-color-primary);
+}
+
+.categoryBar {
+  width: 100%;
+  height: 6px;
+  background-color: var(--ifm-color-emphasis-200);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.3rem;
+}
+
+.categoryBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
+  transition: width 0.5s ease;
+  border-radius: 3px;
+}
+
+.categoryCount {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-600);
+  display: block;
+  text-align: right;
+}
+
+/* Results Footer */
+.resultsFooter {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0;
+  text-align: center;
+  font-style: italic;
 }
 
 .resetButton {
-  padding: 0.8rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   background-color: var(--ifm-color-primary);
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-weight: 500;
+  font-size: 0.9rem;
   transition: background-color 0.2s ease;
 }
 

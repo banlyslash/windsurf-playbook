@@ -32,17 +32,6 @@ Below are the features you can explicitly invoke via @-mentions in Cascade.
 - **Tips**:
   - Prefer `@docs` over `@web` for official docs and predictable formatting.
 
-## @diff (Current Git Diff) — Beta
-- **Introduction**: Bring the current repository `git diff` into context to discuss pending changes.
-- **Settings**: None; feature is marked beta.
-- **Do’s**:
-  - Use when reviewing or refining a WIP change set.
-  - Ask for targeted improvements, test updates, or docstring additions based on the diff.
-- **Don’ts**:
-  - Don’t use @diff for large, unrelated change piles—split them first.
-- **Tips**:
-  - Have Cascade summarize the diff and propose a minimal set of edits to meet acceptance criteria.
-
 ## Code Symbols and Files (functions/classes/files/directories)
 - **Introduction**: Deterministically include specific code elements by @‑mentioning them.
 - **Settings**: Availability depends on local indexing and language parser support (e.g., Python, TS/JS, Go, Java, C/C++, PHP, Ruby, C#, Kotlin, Dart, Bash, COBOL, etc.).

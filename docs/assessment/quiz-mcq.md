@@ -4,15 +4,18 @@ keywords: ["quiz", "Windsurf", "basic concepts", "knowledge test", "learning", "
 image: "/img/docusaurus-social-card.jpg"
 ---
 
-# Quiz 1: Basic Concepts
+# Assessment 1: Basic Concepts
 
-Each topic has 3–5 easy questions to reflect on key concepts. Test your knowledge with this interactive quiz!
+Each topic has 3–5 easy questions to reflect on key concepts. Test your knowledge with this interactive assessment!
 
 <ThreadedQuiz 
-  title="Windsurf Basic Concepts Quiz" 
+  title="Windsurf Basic Concepts Assessment" 
   showCategories={true}
   randomize={true}
   maxQuestions={36}
+  hideCheckAnswer={true}
+  autoAdvance={true}
+  autoAdvanceDelay={600}
   questions={[
     // Tab Features
     {
@@ -269,6 +272,7 @@ Each topic has 3–5 easy questions to reflect on key concepts. Test your knowle
     },
     {
       category: "Workflows",
+      question: "How do you invoke a workflow?",
       options: [
         "With @workflow",
         "With /[workflow-name]",

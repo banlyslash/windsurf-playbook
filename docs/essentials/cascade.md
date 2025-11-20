@@ -17,7 +17,7 @@ Cascade is your in‑IDE coding copilot for chat and code edits. It understands 
 - **Model selection**: pick the right model under the chat input based on speed/accuracy needs
 - **Planning Mode**: enable for longer tasks; track/edit the Todo list in‑chat
 - **Persistent Context**: add Custom Instructions and pin files/dirs/snippets in Advanced tab
-- **@‑Mentions**: reference files, dirs, functions/classes, terminal, or `@diff` to guarantee context
+- **@‑Mentions**: reference files, dirs, functions/classes, or terminal to guarantee context
 - **Auto‑continue**: allow Cascade to resume when tool‑call limits hit (consumes credits)
 
 ## Do’s and Don’ts (Code Quality)
