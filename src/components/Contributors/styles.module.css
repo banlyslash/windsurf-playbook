@@ -1,0 +1,77 @@
+.contributorsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 1rem 0;
+}
+
+.contributorCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 280px;
+  flex: 1 1 calc(50% - 1rem);
+  max-width: calc(50% - 1rem);
+}
+
+@media (max-width: 768px) {
+  .contributorCard {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary, #FF6B35);
+}
+
+[data-theme='dark'] .name {
+  color: #FF6B35;
+}
+
+.title {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+[data-theme='dark'] .title {
+  color: #aaa;
+}
+
+.githubLink {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.25rem;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.githubLink:hover {
+  color: var(--ifm-color-primary, #FF6B35);
+}
+
+[data-theme='dark'] .githubLink {
+  color: #aaa;
+}
+
+[data-theme='dark'] .githubLink:hover {
+  color: #FF6B35;
+}

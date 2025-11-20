@@ -613,7 +613,11 @@ For changes spanning multiple repos:
 
 ## Additional Resources
 
-- [Atlassian MCP Server Documentation](https://github.com/modelcontextprotocol/servers/tree/main/src/atlassian)
-- [GitHub MCP Server Documentation](https://github.com/modelcontextprotocol/servers/tree/main/src/github)
+- [Atlassian MCP Server Documentation](https://github.com/atlassian/atlassian-mcp-server)
+- [GitHub MCP Server Documentation](https://github.com/github/github-mcp-server) - Official GitHub MCP Server
+- [GitHub MCP Server Guide](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/use-the-github-mcp-server) - Official GitHub Docs
+- [Model Context Protocol Official Site](https://modelcontextprotocol.io/)
+- [MCP Servers Repository](https://github.com/modelcontextprotocol/servers)
+- [MCP Example Servers](https://modelcontextprotocol.io/examples)
 - [MCP Server Catalog](https://opentools.com/)
 - [Conventional Commits](https://www.conventionalcommits.org/) - Commit message format

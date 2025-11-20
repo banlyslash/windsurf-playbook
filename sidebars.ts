@@ -15,6 +15,7 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 const sidebars: SidebarsConfig = {
   // Manually defined sidebar for better organization
   tutorialSidebar: [
+    "overview",
     "intro",
     "get-started",
     {
@@ -73,6 +74,14 @@ const sidebars: SidebarsConfig = {
       items: [
         "challenges/quiz-mcq", 
         "challenges/quiz-mcq-medium"
+      ],
+    },
+    {
+      type: "category",
+      label: "Assessments",
+      items: [
+        "assessment/quiz-mcq",
+        "assessment/quiz-mcq-medium"
       ],
     },
   ],
