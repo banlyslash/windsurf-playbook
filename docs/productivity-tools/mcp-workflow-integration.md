@@ -23,7 +23,81 @@ Combining multiple MCP servers creates a powerful, end-to-end development workfl
 
 ### Configuration Setup
 
-Add both servers to your `~/.codeium/windsurf/mcp_config.json`:
+#### Atlassian MCP Server Configuration
+
+Add the Atlassian server to your `~/.codeium/windsurf/mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "atlassian": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-atlassian"],
+      "env": {
+        "ATLASSIAN_API_TOKEN": "<YOUR_ATLASSIAN_API_TOKEN>",
+        "ATLASSIAN_DOMAIN": "<YOUR_DOMAIN>.atlassian.net",
+        "ATLASSIAN_EMAIL": "<YOUR_EMAIL>"
+      }
+    }
+  }
+}
+```
+
+#### GitHub MCP Server Configuration
+
+Choose one of the following options:
+
+##### Option 1: Remote GitHub MCP Server (Recommended)
+
+The remote server does **not require Docker** and uses GitHub's hosted MCP service:
+
+```json
+{
+  "mcpServers": {
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer <YOUR_GITHUB_PAT>"
+      }
+    }
+  }
+}
+```
+
+##### Option 2: Local GitHub MCP Server (Requires Docker)
+
+The local server requires [Docker](https://www.docker.com/) to be installed and running:
+
+```json
+{
+  "mcpServers": {
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_GITHUB_PAT>"
+      }
+    }
+  }
+}
+```
+
+**Prerequisites for local server**:
+1. Install [Docker](https://www.docker.com/)
+2. Ensure Docker is running
+3. If you encounter pull errors, run `docker logout ghcr.io` to clear expired tokens
+
+#### Complete Configuration Example
+
+Here's a complete `mcp_config.json` with both servers (using remote GitHub server):
 
 ```json
 {
@@ -38,10 +112,10 @@ Add both servers to your `~/.codeium/windsurf/mcp_config.json`:
       }
     },
     "github": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_GITHUB_PAT>"
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer <YOUR_GITHUB_PAT>"
       }
     }
   }

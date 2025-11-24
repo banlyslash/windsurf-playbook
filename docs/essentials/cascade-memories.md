@@ -4,7 +4,7 @@ keywords: ["Memories", "Cascade", "context", "persistent", "Windsurf", "conversa
 image: "/img/docusaurus-social-card.jpg"
 ---
 
-# Memories
+# Cascade Memories
 
 ## Introduction
 Cascade Memories is a powerful system for sharing and persisting context across conversations in Windsurf. Unlike Rules (which are manually defined), Memories are automatically generated when Cascade encounters useful information or can be explicitly created by users. This feature ensures that important context about your codebase, preferences, and decisions is preserved and retrieved when relevant, enhancing code quality and productivity across multiple sessions.
