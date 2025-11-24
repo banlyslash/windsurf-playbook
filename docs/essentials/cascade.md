@@ -20,6 +20,8 @@ Cascade is your in‑IDE coding copilot for chat and code edits. It understands 
 - **@‑Mentions**: reference files, dirs, functions/classes, or terminal to guarantee context
 - **Auto‑continue**: allow Cascade to resume when tool‑call limits hit (consumes credits)
 
+![Cascade Settings](/img/cascade-figure-1.png)
+
 ## Do’s and Don’ts (Code Quality)
 - **Do** ask for small, atomic changes; review proposed diffs before applying
 - **Do** create a named checkpoint[^1] before risky refactors; revert if outcomes regress

@@ -16,13 +16,9 @@ To ensure all new projects follow a consistent structure, best practices, and co
 Windsurf helps us:
 
 1. Document our setup after the manual project initialization.
-
 2. Apply best practices and configurations.
-
 3. Automatically generate project documentation (README.md).
-
 4. Analyze the codebase to create a project conventions file (convention.md).
-
 5. Maintain consistent code quality and structure over time.
 
 ## 2. Step-by-Step Process
@@ -35,9 +31,7 @@ Read the latest official documentation for the chosen framework (React, Next.js,
 Initialize the project manually:
 
 * Use the framework's official CLI or recommended method.
-
 * Select TypeScript if available.
-
 * Apply official starter templates or minimal setup as needed.
 
 Ensure all default configurations match the latest recommended practices from the framework docs.
@@ -52,21 +46,13 @@ Do not use Windsurf in this stage. This step requires careful human review and u
 * Setup folder structure:
 
   * `src/`
-
   * `components/`
-
   * `pages/` (or `views/`)
-
   * `services/`
-
   * `utils/`
-
   * `hooks/`
-
   * `assets/`
-
   * `styles/`
-
   * `tests/`
 
 * Define naming conventions:
