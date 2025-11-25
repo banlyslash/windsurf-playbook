@@ -13,6 +13,75 @@
   color: var(--ifm-color-primary);
 }
 
+.nameEntryContainer {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.nameEntryPrompt {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.nameEntryForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.nameInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  transition: border-color 0.2s ease;
+}
+
+.nameInput:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+}
+
+.nameInput::placeholder {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.startButton {
+  padding: 0.75rem 2rem;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.startButton:hover:not(:disabled) {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+.startButton:disabled {
+  background-color: var(--ifm-color-emphasis-300);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.userName {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-800);
+  margin-bottom: 1rem;
+}
+
 .questionContainer {
   display: flex;
   flex-direction: column;
@@ -55,6 +124,18 @@
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
+  gap: 0.75rem;
+}
+
+.optionLabel {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  min-width: 1.5rem;
+  flex-shrink: 0;
+}
+
+.optionText {
+  flex: 1;
 }
 
 .option:hover:not(.selected) {
@@ -121,7 +202,7 @@
 
 .checkButton {
   padding: 0.6rem 1.2rem;
-  background-color: var(--ifm-color-success);
+  background-color: var(--ifm-color-primary);
   color: white;
   border: none;
   border-radius: 4px;
@@ -133,7 +214,7 @@
 }
 
 .checkButton:hover {
-  background-color: var(--ifm-color-success-dark);
+  background-color: var(--ifm-color-primary-dark);
 }
 
 .resultsContainer {

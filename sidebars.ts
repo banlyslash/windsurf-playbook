@@ -61,6 +61,7 @@ const sidebars: SidebarsConfig = {
       type: "category",
       label: "Use Cases",
       items: [
+        "use-cases/prompt-library",
         "use-cases/from-requirement-to-code",
         "use-cases/prompt-engineering-for-coding",
       ],

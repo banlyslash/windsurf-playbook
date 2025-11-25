@@ -16,6 +16,7 @@ Each topic has 3–5 easy questions to reflect on key concepts. Test your knowle
   hideCheckAnswer={true}
   autoAdvance={true}
   autoAdvanceDelay={600}
+  requireName={true}
   questions={[
     // Tab Features
     {
