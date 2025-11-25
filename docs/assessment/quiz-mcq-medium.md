@@ -16,6 +16,7 @@ Scenario-style questions to check deeper understanding. Test your knowledge with
   hideCheckAnswer={true}
   autoAdvance={true}
   autoAdvanceDelay={600}
+  requireName={true}
   questions={[
     // Tab Features
     {

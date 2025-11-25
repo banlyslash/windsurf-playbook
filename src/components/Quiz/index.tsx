@@ -11,9 +11,12 @@ export interface QuizQuestion {
 interface QuizProps {
   questions: QuizQuestion[];
   title?: string;
+  requireName?: boolean;
 }
 
-export default function Quiz({ questions, title = 'Quiz' }: QuizProps): React.ReactElement {
+export default function Quiz({ questions, title = 'Quiz', requireName = false }: QuizProps): React.ReactElement {
+  const [userName, setUserName] = useState('');
+  const [hasStarted, setHasStarted] = useState(!requireName);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<number[]>(Array(questions.length).fill(-1));
   const [showResults, setShowResults] = useState(false);
@@ -50,6 +53,13 @@ export default function Quiz({ questions, title = 'Quiz' }: QuizProps): React.Re
     setShowExplanation(false);
   };
 
+  const handleStartQuiz = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (userName.trim()) {
+      setHasStarted(true);
+    }
+  };
+
   const calculateScore = () => {
     return selectedAnswers.reduce((score, answer, index) => {
       return answer === questions[index].correctAnswer ? score + 1 : score;
@@ -65,7 +75,28 @@ export default function Quiz({ questions, title = 'Quiz' }: QuizProps): React.Re
     <div className={styles.quizContainer}>
       <h2 className={styles.quizTitle}>{title}</h2>
       
-      {!showResults ? (
+      {requireName && !hasStarted ? (
+        <div className={styles.nameEntryContainer}>
+          <p className={styles.nameEntryPrompt}>Please enter your name to begin the assessment:</p>
+          <form onSubmit={handleStartQuiz} className={styles.nameEntryForm}>
+            <input
+              type="text"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+              placeholder="Enter your name"
+              className={styles.nameInput}
+              autoFocus
+            />
+            <button 
+              type="submit" 
+              className={styles.startButton}
+              disabled={!userName.trim()}
+            >
+              Start Quiz
+            </button>
+          </form>
+        </div>
+      ) : !showResults ? (
         <div className={styles.questionContainer}>
           <div className={styles.questionHeader}>
             <span className={styles.questionNumber}>
@@ -89,7 +120,8 @@ export default function Quiz({ questions, title = 'Quiz' }: QuizProps): React.Re
                 }`}
                 onClick={() => handleAnswerSelect(index)}
               >
-                {option}
+                <span className={styles.optionLabel}>{String.fromCharCode(65 + index)}.</span>
+                <span className={styles.optionText}>{option}</span>
               </button>
             ))}
           </div>
@@ -129,10 +161,12 @@ export default function Quiz({ questions, title = 'Quiz' }: QuizProps): React.Re
         </div>
       ) : (
         <div className={styles.resultsContainer}>
-          <h3 className={styles.resultsTitle}>Quiz Results</h3>
+          <h3 className={styles.resultsTitle}>
+            {requireName && userName ? `${userName}'s Results` : 'Quiz Results'}
+          </h3>
           <div className={styles.scoreContainer}>
             <p className={styles.score}>
-              You scored {score} out of {questions.length}
+              {requireName && userName ? `${userName}, you` : 'You'} scored {score} out of {questions.length}
               <span className={styles.percentage}>
                 ({Math.round((score / questions.length) * 100)}%)
               </span>

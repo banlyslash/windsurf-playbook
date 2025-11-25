@@ -14,7 +14,7 @@ Did you know that:
 - **Model Selection** is crucial! Using an expensive model can quickly drain your credits, so choose wisely!
 - You can **Drag and Drop** to @-mention a file or folder! Typing mentions can be finicky at times, so this feature will save you some trouble.
 - **Local Indexing** for a new workspace can lead to initial slowness, as Windsurf requires approximately 5 to 10 minutes to index the entire codebase before you can fully utilize its features.
-
+- **Switching models** can cause context loss! The new model won't inherit the full conversation history or context from the previous one, so you may need to restate key information.
 
 ## Test Your Knowledge
 
@@ -31,6 +31,17 @@ Let's see how well you understand Windsurf with this quick quiz!
     ],
     correctAnswer: 1,
     explanation: "Cascade's memory fades over time, making early context blur. It's recommended to ask Cascade to explain relevant content to verify its understanding before making intensive changes."
+  },
+  {
+    question: "What happens when you switch models in Cascade?",
+    options: [
+      "The new model inherits all context perfectly",
+      "Nothing changes, it's seamless",
+      "You may lose context as the new model starts fresh without full history",
+      "The previous model continues running in the background"
+    ],
+    correctAnswer: 2,
+    explanation: "Switching models can cause context loss. The new model won't inherit the full conversation history or context, so you may need to restate key information."
   },
   {
     question: "How can you export a conversation with Cascade?",

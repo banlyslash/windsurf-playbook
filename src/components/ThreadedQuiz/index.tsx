@@ -18,6 +18,7 @@ interface ThreadedQuizProps {
   hideCheckAnswer?: boolean; // Whether to hide the "Check Answer" button
   autoAdvance?: boolean; // Whether to automatically advance to next question after selection
   autoAdvanceDelay?: number; // Delay in milliseconds before auto-advancing (default: 800ms)
+  requireName?: boolean; // Whether to require name entry before starting
 }
 
 // Fisher-Yates shuffle algorithm
@@ -38,10 +39,13 @@ export default function ThreadedQuiz({
   maxQuestions,
   hideCheckAnswer = false,
   autoAdvance = false,
-  autoAdvanceDelay = 800
+  autoAdvanceDelay = 800,
+  requireName = false
 }: ThreadedQuizProps): React.ReactElement {
   // State used to force re-randomization on reset
   const [shuffleKey, setShuffleKey] = useState(0);
+  const [userName, setUserName] = useState('');
+  const [hasStarted, setHasStarted] = useState(!requireName);
 
   // Memoize the question selection and randomization
   const displayedQuestions = useMemo(() => {
@@ -111,6 +115,13 @@ export default function ThreadedQuiz({
     setShowExplanation(false);
   };
 
+  const handleStartQuiz = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (userName.trim()) {
+      setHasStarted(true);
+    }
+  };
+
   const calculateScore = () => {
     return selectedAnswers.reduce((score, answer, index) => {
       const question = displayedQuestions[index];
@@ -127,19 +138,44 @@ export default function ThreadedQuiz({
   // Get performance feedback based on score percentage
   const getPerformanceFeedback = () => {
     const percentage = Math.round((score / displayedQuestions.length) * 100);
+    const name = requireName && userName ? userName : '';
     
     if (percentage === 100) {
-      return { emoji: '🏆', message: 'Perfect Score!', color: '#FFD700' };
+      return { 
+        emoji: '🏆', 
+        message: name ? `${name}, Perfect Score!` : 'Perfect Score!', 
+        color: '#FFD700' 
+      };
     } else if (percentage >= 90) {
-      return { emoji: '🌟', message: 'Outstanding!', color: '#4CAF50' };
+      return { 
+        emoji: '🌟', 
+        message: name ? `Outstanding, ${name}!` : 'Outstanding!', 
+        color: '#4CAF50' 
+      };
     } else if (percentage >= 80) {
-      return { emoji: '🎯', message: 'Excellent Work!', color: '#2196F3' };
+      return { 
+        emoji: '🎯', 
+        message: name ? `Excellent Work, ${name}!` : 'Excellent Work!', 
+        color: '#2196F3' 
+      };
     } else if (percentage >= 70) {
-      return { emoji: '👍', message: 'Good Job!', color: '#FF9800' };
+      return { 
+        emoji: '👍', 
+        message: name ? `Good Job, ${name}!` : 'Good Job!', 
+        color: '#FF9800' 
+      };
     } else if (percentage >= 60) {
-      return { emoji: '📚', message: 'Keep Learning!', color: '#9C27B0' };
+      return { 
+        emoji: '📚', 
+        message: name ? `Keep Learning, ${name}!` : 'Keep Learning!', 
+        color: '#9C27B0' 
+      };
     } else {
-      return { emoji: '💪', message: 'Keep Practicing!', color: '#F44336' };
+      return { 
+        emoji: '💪', 
+        message: name ? `Keep Practicing, ${name}!` : 'Keep Practicing!', 
+        color: '#F44336' 
+      };
     }
   };
 
@@ -180,7 +216,28 @@ export default function ThreadedQuiz({
     <div className={styles.quizContainer}>
       <h2 className={styles.quizTitle}>{title}</h2>
       
-      {!showResults ? (
+      {requireName && !hasStarted ? (
+        <div className={styles.nameEntryContainer}>
+          <p className={styles.nameEntryPrompt}>Please enter your name to begin the assessment:</p>
+          <form onSubmit={handleStartQuiz} className={styles.nameEntryForm}>
+            <input
+              type="text"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+              placeholder="Enter your name"
+              className={styles.nameInput}
+              autoFocus
+            />
+            <button 
+              type="submit" 
+              className={styles.startButton}
+              disabled={!userName.trim()}
+            >
+              Start Assessment
+            </button>
+          </form>
+        </div>
+      ) : !showResults ? (
         <div className={styles.questionContainer}>
           <div className={styles.questionHeader}>
             <span className={styles.questionNumber}>
@@ -215,7 +272,8 @@ export default function ThreadedQuiz({
                 }`}
                 onClick={() => handleAnswerSelect(index)}
               >
-                {option}
+                <span className={styles.optionLabel}>{String.fromCharCode(65 + index)}.</span>
+                <span className={styles.optionText}>{option}</span>
               </button>
             ))}
           </div>
@@ -271,7 +329,10 @@ export default function ThreadedQuiz({
         <div className={styles.resultsContainer}>
           <div className={styles.resultsCard}>
             <h3 className={styles.resultsTitle}>
-              {title.replace('Quiz', 'Assessment')} Results
+              {requireName && userName 
+                ? `${userName}'s ${title.replace('Quiz', 'Assessment')} Results`
+                : `${title.replace('Quiz', 'Assessment')} Results`
+              }
             </h3>
             
             <div className={styles.performanceBadge}>
