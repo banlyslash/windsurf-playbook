@@ -39,7 +39,8 @@
 .nameEntryPrompt {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  color: var(--ifm-color-emphasis-800);
+  color: var(--ifm-font-color-base);
+  font-weight: 500;
 }
 
 .nameEntryForm {
@@ -96,7 +97,7 @@
 .userName {
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--ifm-color-emphasis-800);
+  color: var(--ifm-font-color-base);
   margin-bottom: 1rem;
 }
 
