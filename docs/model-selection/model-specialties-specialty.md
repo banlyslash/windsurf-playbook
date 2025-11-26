@@ -6,6 +6,11 @@ image: "/img/docusaurus-social-card.jpg"
 
 # By Specialty
 
+:::info Document Information
+**Last Updated:** October 2025  
+**Note:** AI models and their capabilities evolve rapidly. This information reflects the state of available models at the time of writing. Always check for the latest model releases and benchmarks.
+:::
+
 Selections focus on capability fit; include public benchmark evidence where available. Benchmarks vary by setup; treat as directional.
 
 ---
