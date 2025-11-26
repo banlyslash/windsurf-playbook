@@ -25,7 +25,7 @@ Integrating Windsurf into an existing project can significantly enhance your dev
 
 Before starting, ensure you have:
 
-- [ ] Windsurf IDE installed ([Download here](https://codeium.com/windsurf/download))
+- [ ] Windsurf IDE installed ([Download here](https://windsurf.com/download))
 - [ ] Admin or lead developer access to the project
 - [ ] Understanding of your project's tech stack and architecture
 - [ ] Git repository with recent commits
@@ -52,7 +52,7 @@ graph LR
 ### Step 1: Install and Setup Windsurf
 
 **1.1 Download and Install**
-- Download Windsurf from [official website](https://codeium.com/windsurf/download)
+- Download Windsurf from [official website](https://windsurf.com/download)
 - Install for your OS (macOS, Windows, or Linux)
 - Launch Windsurf and sign in/create account
 
@@ -371,7 +371,7 @@ Create a `WINDSURF_GUIDE.md` in your project:
 
 ## Quick Start
 
-1. Install Windsurf: https://codeium.com/windsurf/download
+1. Install Windsurf: https://windsurf.com/download
 2. Clone the repository
 3. Open project in Windsurf
 4. Wait for indexing to complete
@@ -1369,11 +1369,11 @@ Generate JSDoc comments for all functions in @[file-path]
 ### Official Documentation
 - [Windsurf Docs](https://docs.windsurf.com)
 - [Cascade Guide](https://docs.windsurf.com/windsurf/cascade)
-- [MCP Documentation](https://docs.windsurf.com/windsurf/mcp)
+- [MCP Documentation](https://docs.windsurf.com/windsurf/cascade/mcp)
 
 ### Community
-- [Windsurf Discord](https://discord.gg/codeium)
-- [GitHub Discussions](https://github.com/Exafunction/codeium-vscode/discussions)
+- [Windsurf Discord](https://discord.com/invite/3XFf78nAx5)
+- [Windsurf Reddit](https://www.reddit.com/r/Codeium/)
 
 ### Related Guides
 - [Project Initialization Guide](./project-initialization.md)
