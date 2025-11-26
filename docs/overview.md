@@ -104,22 +104,6 @@ Each guide includes:
 
 ---
 
-## 💬 Share Your Feedback
-
-We value your input! If you have feedback, suggestions, or ideas for improving this playbook:
-
-**📝 Create an issue:** [GitHub Issues](https://github.com/slashdigital/windsurf-playbook/issues)
-
-Your contributions help make this resource better for the entire community. Whether it's:
-- Reporting unclear documentation
-- Suggesting new topics or examples
-- Sharing your own workflows and best practices
-- Identifying errors or outdated information
-
-Every piece of feedback helps us improve!
-
----
-
 ## About This Community Project
 
 ### Contributors
@@ -260,6 +244,22 @@ This playbook is continuously evolving. Major updates and changes are documented
 >
 > Remember: The best way to learn is by doing. Use this playbook as a guide, but don't be afraid to experiment, adapt, and discover what works best for you and your team."
 >
+
+---
+
+## 💬 Share Your Feedback
+
+We value your input! If you have feedback, suggestions, or ideas for improving this playbook:
+
+**📝 Create an issue:** [GitHub Issues](https://github.com/slashdigital/windsurf-playbook/issues)
+
+Your contributions help make this resource better for the entire community. Whether it's:
+- Reporting unclear documentation
+- Suggesting new topics or examples
+- Sharing your own workflows and best practices
+- Identifying errors or outdated information
+
+Every piece of feedback helps us improve!
 
 ---
 

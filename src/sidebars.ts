@@ -15,7 +15,11 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 const sidebars: SidebarsConfig = {
   // Manually defined sidebar for better organization
   tutorialSidebar: [
-    "overview",
+    {
+      type: "doc",
+      id: "overview",
+      label: "Introduction",
+    },
     "get-started",
     {
       type: "category",
