@@ -111,6 +111,29 @@
   margin-bottom: 1rem;
 }
 
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.cardTitle {
+  margin: 0;
+}
+
+.questionPill {
+  display: inline-block;
+  background-color: #fff4e6;
+  color: #d97706;
+  padding: 0.25rem 0.65rem;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #fed7aa;
+}
+
 .cardDescription {
   font-size: 0.95rem;
   color: var(--ifm-color-emphasis-700);
@@ -147,10 +170,35 @@
   color: white;
 }
 
+.optionButtonOutline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border-width: 2px;
+  background-color: #fff4e6;
+  color: #d97706;
+  border-color: #fed7aa;
+}
+
+.optionButtonOutline:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffedd5;
+  border-color: #fb923c;
+  color: #c2410c;
+}
+
+.optionButtonOutline:hover .difficultyLabel {
+  color: var(--ifm-color-primary-dark);
+}
+
 .difficultyLabel {
   font-size: 1.1rem;
-  margin-bottom: 0.25rem;
-  color: white;
+  color: inherit;
 }
 
 .questionCount {

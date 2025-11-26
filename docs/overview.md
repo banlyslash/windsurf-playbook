@@ -1,64 +1,145 @@
 ---
-description: "Learn about the Windsurf Playbook - its purpose, contributors, and the community behind this comprehensive guide to mastering AI-powered development with Windsurf."
-keywords: ["Windsurf Playbook", "overview", "contributors", "authors", "acknowledgments", "AI development", "documentation"]
+description: "Comprehensive guide to Windsurf Playbook - learn about Cascade AI agent, Tab autocomplete, Command editor, and productivity tools. Start your AI-powered development journey."
+keywords: ["Windsurf Playbook", "overview", "introduction", "Cascade", "AI development", "getting started", "features", "guide"]
 image: "/img/docusaurus-social-card.jpg"
 sidebar_position: 1
 ---
 
-# Overview
+# Welcome to Windsurf Playbook
 
-## About This Playbook
+## What is This Playbook?
 
-The **Windsurf Playbook** is a comprehensive, community-driven guide designed to help developers master AI-powered development using Windsurf IDE and its powerful Cascade AI assistant. This playbook bridges the gap between traditional development practices and the emerging world of AI-assisted coding, providing practical strategies, best practices, and real-world workflows.
+The **Windsurf Playbook** is your comprehensive, community-driven guide to mastering AI-powered development with Windsurf IDE and its intelligent Cascade AI assistant.
 
-### Purpose
+Unlike traditional documentation that only lists features, this playbook provides:
 
-This playbook serves multiple purposes:
-
-- **Educational Resource**: Teach developers how to effectively leverage AI assistance in their daily workflow
-- **Best Practices Guide**: Document proven patterns and strategies for AI-powered development
-- **Community Knowledge Base**: Capture collective wisdom from developers using Windsurf in production
-- **Onboarding Tool**: Help teams adopt AI-assisted development practices efficiently
-- **Reference Manual**: Provide quick access to features, tools, and techniques
-
-### What Makes This Playbook Different
-
-Unlike traditional documentation that focuses solely on features, the Windsurf Playbook emphasizes:
-
-- **Practical Workflows**: Real-world scenarios and step-by-step guides
+- **Practical Workflows**: Real-world scenarios with step-by-step guides
+- **Best Practices**: Proven patterns from developers using Windsurf in production
 - **Context-Aware Strategies**: When and how to use different features effectively
-- **Integration Patterns**: Connecting Windsurf with existing tools and workflows
-- **Team Collaboration**: Best practices for AI-assisted development in team environments
-- **Continuous Learning**: Regular updates based on community feedback and new capabilities
+- **Team Collaboration**: Guidelines for AI-assisted development in team environments
+- **Quick Reference**: Fast access to features, tools, and techniques
 
-## Target Audience
+### Who is This For?
 
-This playbook is designed for:
+- **Individual Developers**: Enhance productivity with AI assistance
+- **Development Teams**: Adopt AI-powered workflows across projects
+- **Technical Leads**: Evaluate and implement AI development tools
+- **Students & Learners**: Build modern development skills with AI
+- **Open Source Contributors**: Leverage AI for faster contribution cycles
 
-- **Individual Developers**: Looking to enhance productivity with AI assistance
-- **Development Teams**: Adopting AI-powered workflows across projects
-- **Technical Leads**: Evaluating and implementing AI development tools
-- **Students & Learners**: Building modern development skills with AI
-- **Open Source Contributors**: Leveraging AI for faster contribution cycles
+---
 
-## Contributors
+## Start Your Journey
+
+This playbook contains concise summaries of key Windsurf features, focusing on their introduction, settings, do's and don'ts, and tips for maximizing code quality and productivity.
+
+### 🚀 Getting Started
+
+**New to Windsurf?** Start here:
+- [Get Started](./get-started) - Introduction to Windsurf IDE and its core capabilities
+- [Stuff You Should Know](./stuff-you-should-know) - Essential information before diving in
+- [Caution](./caution) - Important warnings and considerations
+
+### 🎯 Windsurf in Action
+
+**Ready to build?** Learn practical workflows:
+- [Project Initialization](./windsurf-in-actions/project-initialization) - Setting up new projects with AI assistance
+- [Add to Existing Project](./windsurf-in-actions/add-to-existing-project) - Integrating Windsurf into your current codebase
+
+### ⚡ Core Features (Essentials)
+
+**Master the fundamentals:**
+- [Tab](./essentials/tab) - Smart autocomplete and navigation system
+- [Command](./essentials/command) - Inline AI-powered code editing
+- [Cascade](./essentials/cascade) - Your intelligent AI coding copilot
+- [Cascade Memories](./essentials/cascade-memories) - Persist context across conversations
+- [Cascade Rules](./essentials/cascade-rules) - Define project-specific guidelines
+
+### 🛠️ Productivity Tools
+
+**Level up your workflow:**
+- [Workflows](./productivity-tools/workflows) - Automate repetitive task sequences
+- [Planning Mode](./productivity-tools/planning-mode) - Break down complex, multi-step tasks
+- [At-mention Tools](./productivity-tools/at-mention-tools) - Use @ mentions to access powerful features
+- [Web Search Guide](./productivity-tools/web-search-guide) - Leverage real-time web information
+- [MCP](./productivity-tools/mcp) - Connect to external tools via Model Context Protocol
+- [MCP Workflow Integration](./productivity-tools/mcp-workflow-integration) - Advanced MCP usage patterns
+
+### 🎨 Model Selection
+
+**Choose the right AI for the job:**
+- [Model Selection for Coding](./model-selection/model-selection-coding) - Guidelines for coding tasks
+- [Model Specialties](./model-selection/model-specialties-specialty) - Understanding model strengths
+
+### 💡 Use Cases
+
+**See Windsurf in real scenarios:**
+- [Prompt Library](./use-cases/prompt-library) - Curated prompts for common tasks
+- [From Requirement to Code](./use-cases/from-requirement-to-code) - Complete workflow from Jira to implementation
+- [Prompt Engineering for Coding](./use-cases/prompt-engineering-for-coding) - Craft effective prompts with examples
+
+### 📝 Test Your Knowledge
+
+**Validate your learning:**
+- [Interactive Quiz](/quiz) - Test your understanding with hands-on assessments
+
+---
+
+## How to Use This Playbook
+
+Each guide includes:
+- **Introduction** to the feature
+- **Settings & Configuration** for optimal setup
+- **Do's and Don'ts** for maintaining code quality
+- **Tips** for effective usage
+- **Suggested Topics** for applying features to your work
+
+**Recommended Learning Path:**
+1. Start with **Get Started** to understand Windsurf's capabilities
+2. Follow a **Windsurf in Action** guide to see practical application
+3. Deep dive into **Core Features** based on your needs
+4. Review **Do's and Don'ts** sections to understand best practices
+5. Explore **Productivity Tools** to optimize your workflow
+6. Take the **Quiz** to validate your knowledge
+
+---
+
+## 💬 Share Your Feedback
+
+We value your input! If you have feedback, suggestions, or ideas for improving this playbook:
+
+**📝 Create an issue:** [GitHub Issues](https://github.com/slashdigital/windsurf-playbook/issues)
+
+Your contributions help make this resource better for the entire community. Whether it's:
+- Reporting unclear documentation
+- Suggesting new topics or examples
+- Sharing your own workflows and best practices
+- Identifying errors or outdated information
+
+Every piece of feedback helps us improve!
+
+---
+
+## About This Community Project
+
+### Contributors
 
 <Contributors />
 
-## Special Thanks
+### Special Thanks
 
-### Special Mention
+#### Special Mention
 
 - **[Kristoff](https://github.com/kristoff2016)** - For generously sharing his real-world experience using Windsurf in production projects, providing invaluable insights into practical workflows and best practices
 
-### Technology Partners
+#### Technology Partners
 
 - **Codeium Team**: For developing Windsurf and providing continuous innovation in AI-assisted development
 - **Anthropic**: For Claude AI models that power Cascade's intelligent assistance
 - **OpenAI**: For GPT models integrated into the Windsurf ecosystem
 - **Google**: For Gemini models offering diverse AI capabilities
 
-### Open Source Community
+#### Open Source Community
 
 This playbook builds upon the collective knowledge of:
 
@@ -66,9 +147,9 @@ This playbook builds upon the collective knowledge of:
 - **Docusaurus Team**: For the excellent documentation framework
 - **GitHub Community**: For collaboration tools and version control best practices
 
-## Acknowledgments
+### Acknowledgments
 
-### Organizations
+#### Organizations
 
 **Slash Company**  
 For supporting the development of this playbook and fostering a culture of knowledge sharing and continuous learning. Special recognition to the team members who contributed to "The AI-Powered Developer" Confluence space, which serves as a collaborative knowledge base for Windsurf best practices, including:
@@ -79,7 +160,7 @@ For supporting the development of this playbook and fostering a culture of knowl
 - Research topics and continuous improvement initiatives
 - Quiz development and assessment frameworks
 
-### Inspiration & References
+#### Inspiration & References
 
 This playbook is inspired by and draws from:
 
@@ -89,7 +170,7 @@ This playbook is inspired by and draws from:
 - Real-world experiences from production environments
 - Community feedback and feature requests
 
-## Repository Statistics
+### Repository Statistics
 
 This playbook is actively maintained on GitHub with continuous contributions:
 
@@ -100,7 +181,7 @@ This playbook is actively maintained on GitHub with continuous contributions:
 - **Pull Requests**: 7+ merged PRs with comprehensive features
 - **Commits**: 20+ commits covering documentation, features, and improvements
 
-### Recent Major Contributions
+#### Recent Major Contributions
 
 - **MCP Workflow Integration Guide** (PR #7) - Complete 7-phase workflow with real-world examples, authentication guides, and time savings analysis (~80% reduction in workflow overhead)
 - **Slash Professional Theme** (PR #7) - Brand identity with gradient backgrounds, responsive design, and mobile optimizations
@@ -109,13 +190,13 @@ This playbook is actively maintained on GitHub with continuous contributions:
 - **Interactive Components** - Quiz feature, threaded assessments, visual enhancements, and screenshot documentation
 - **Documentation Structure** - Reorganized content hierarchy, improved navigation, and enhanced homepage
 
-### Development Timeline
+#### Development Timeline
 
 - **October 2025**: Initial repository creation and foundational content
 - **November 2025**: Major feature additions including MCP integration, theme implementation, quiz system, and SEO optimization
 - **Ongoing**: Active maintenance with regular updates and community contributions
 
-## Contributing to This Playbook
+### Contributing to This Playbook
 
 We welcome contributions from the community! Whether you're:
 
@@ -126,7 +207,7 @@ We welcome contributions from the community! Whether you're:
 
 Your contributions help make this resource better for everyone.
 
-### How to Contribute
+#### How to Contribute
 
 1. **Fork the Repository**: Start by forking the [Windsurf Playbook repository](https://github.com/slash/windsurf-playbook)
 2. **Make Your Changes**: Add content, fix issues, or improve existing documentation
@@ -135,7 +216,7 @@ Your contributions help make this resource better for everyone.
 
 For detailed contribution guidelines, please see our [CONTRIBUTING.md](https://github.com/slash/windsurf-playbook/blob/main/CONTRIBUTING.md) file.
 
-## License & Usage
+### License & Usage
 
 This playbook is released under the **MIT License**, allowing you to:
 
@@ -144,7 +225,7 @@ This playbook is released under the **MIT License**, allowing you to:
 - Share and distribute with attribution
 - Build upon it for your own documentation
 
-### Attribution
+#### Attribution
 
 When referencing or building upon this playbook, please provide appropriate credit:
 
@@ -154,15 +235,15 @@ https://windsurf-playbook.slash.co
 Licensed under MIT License
 ```
 
-## Stay Connected
+### Stay Connected
 
-### Feedback & Support
+#### Feedback & Support
 
 - **Issues & Suggestions**: [GitHub Issues](https://github.com/slash/windsurf-playbook/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/slash/windsurf-playbook/discussions)
 - **Updates**: Follow the repository for the latest changes
 
-### Version History
+#### Version History
 
 This playbook is continuously evolving. Major updates and changes are documented in our [changelog](https://github.com/slash/windsurf-playbook/blob/main/CHANGELOG.md).
 
@@ -171,7 +252,7 @@ This playbook is continuously evolving. Major updates and changes are documented
 
 ---
 
-## A Note from the Author Team
+### A Note from the Author Team
 
 > "AI-assisted development isn't about replacing developers—it's about amplifying human creativity and problem-solving. This playbook represents our collective journey in discovering how to work alongside AI effectively, maintaining our craft while embracing new possibilities.
 >

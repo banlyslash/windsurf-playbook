@@ -7,7 +7,7 @@ image: "/img/docusaurus-social-card.jpg"
 
 # Assessment 1: Basic Concepts
 
-Each topic has 3–5 easy questions to reflect on key concepts. Test your knowledge with this interactive assessment!
+Each topic has 3–5 basic questions to reflect on key concepts. Test your knowledge with this interactive assessment!
 
 <ThreadedQuiz 
   title="Windsurf Basic Concepts Assessment" 

@@ -16,7 +16,6 @@ const sidebars: SidebarsConfig = {
   // Manually defined sidebar for better organization
   tutorialSidebar: [
     "overview",
-    "intro",
     "get-started",
     {
       type: "category",

@@ -7,7 +7,7 @@ image: "/img/docusaurus-social-card.jpg"
 
 # Quiz 1: Basic Concepts
 
-Each topic has 3–5 easy questions to reflect on key concepts. Test your knowledge with this interactive quiz!
+Each topic has 3–5 basic questions to reflect on key concepts. Test your knowledge with this interactive quiz!
 
 <ThreadedQuiz 
   title="Windsurf Basic Concepts Quiz" 

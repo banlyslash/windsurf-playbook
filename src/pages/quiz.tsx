@@ -27,12 +27,12 @@ const QuizCategories: QuizCategory[] = [
     icon: "📚",
     options: [
       {
-        difficulty: "Easy",
+        difficulty: "Basic",
         link: "/challenges/basic-concepts",
         questions: 36,
       },
       {
-        difficulty: "Medium",
+        difficulty: "Advanced",
         link: "/challenges/advanced-scenarios",
         questions: 36,
       },
@@ -44,12 +44,12 @@ const QuizCategories: QuizCategory[] = [
     icon: "🏆",
     options: [
       {
-        difficulty: "Easy",
+        difficulty: "Basic",
         link: "/assessment/basic-concepts",
         questions: 36,
       },
       {
-        difficulty: "Medium",
+        difficulty: "Advanced",
         link: "/assessment/advanced-scenarios",
         questions: 36,
       },
@@ -63,7 +63,10 @@ function QuizCategoryCard({ title, description, icon, options }: QuizCategory) {
       <div className="card">
         <div className="card__header">
           <div className={styles.cardIcon}>{icon}</div>
-          <Heading as="h3">{title}</Heading>
+          <div className={styles.titleRow}>
+            <Heading as="h3" className={styles.cardTitle}>{title}</Heading>
+            <div className={styles.questionPill}>{options[0].questions} Questions</div>
+          </div>
           <p className={styles.cardDescription}>{description}</p>
         </div>
         <div className="card__body">
@@ -73,13 +76,12 @@ function QuizCategoryCard({ title, description, icon, options }: QuizCategory) {
                 key={idx}
                 className={clsx(
                   "button",
-                  "button--primary",
-                  styles.optionButton
+                  option.difficulty === "Basic" ? "button--outline" : "button--primary",
+                  option.difficulty === "Basic" ? styles.optionButtonOutline : styles.optionButton
                 )}
                 to={option.link}
               >
                 <span className={styles.difficultyLabel}>{option.difficulty}</span>
-                <span className={styles.questionCount}>{option.questions} Questions</span>
               </Link>
             ))}
           </div>
