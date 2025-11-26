@@ -7,7 +7,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Windsurf Playbook",
   tagline: "The AI-Powered Developer Guideline",
-  favicon: "img/favicon.png",
+  favicon: "https://genai.practitioner.help/img/favicon.png",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -19,13 +19,13 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
-  
+
   // SEO Configuration
   trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "banlyslash", // Usually your GitHub org/user name.
+  organizationName: "slashdigital", // Usually your GitHub org/user name.
   projectName: "windsurf-playbook", // Usually your repo name.
 
   onBrokenLinks: "throw",
@@ -42,12 +42,12 @@ const config: Config = {
       "classic",
       {
         docs: {
-          sidebarPath: "./sidebars.ts",
+          sidebarPath: "./src/sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   'https://github.com/windsurf/windsurf-docs/tree/main/docs/',
-          remarkPlugins: [require('remark-math')],
+          remarkPlugins: [require("remark-math")],
           rehypePlugins: [],
           beforeDefaultRemarkPlugins: [],
           beforeDefaultRehypePlugins: [],
@@ -93,11 +93,13 @@ const config: Config = {
     metadata: [
       {
         name: "description",
-        content: "Windsurf Playbook - The AI-Powered Developer Guideline. Learn how to use Windsurf IDE with Cascade AI agent for productive development.",
+        content:
+          "Windsurf Playbook - The AI-Powered Developer Guideline. Learn how to use Windsurf IDE with Cascade AI agent for productive development.",
       },
       {
         name: "keywords",
-        content: "Windsurf, IDE, AI, Cascade, code editor, agentic AI, developer tools, programming",
+        content:
+          "Windsurf, IDE, AI, Cascade, code editor, agentic AI, developer tools, programming",
       },
       {
         name: "author",
@@ -109,7 +111,8 @@ const config: Config = {
       },
       {
         property: "og:description",
-        content: "Learn how to use Windsurf IDE with Cascade AI agent for productive development.",
+        content:
+          "Learn how to use Windsurf IDE with Cascade AI agent for productive development.",
       },
       {
         property: "og:type",
@@ -121,7 +124,8 @@ const config: Config = {
       },
       {
         property: "og:image",
-        content: "https://windsurf-docs.example.com/img/docusaurus-social-card.jpg",
+        content:
+          "https://windsurf-docs.example.com/img/docusaurus-social-card.jpg",
       },
       {
         name: "twitter:card",
@@ -133,11 +137,13 @@ const config: Config = {
       },
       {
         name: "twitter:description",
-        content: "Learn how to use Windsurf IDE with Cascade AI agent for productive development.",
+        content:
+          "Learn how to use Windsurf IDE with Cascade AI agent for productive development.",
       },
       {
         name: "twitter:image",
-        content: "https://windsurf-docs.example.com/img/docusaurus-social-card.jpg",
+        content:
+          "https://windsurf-docs.example.com/img/docusaurus-social-card.jpg",
       },
       {
         name: "viewport",
@@ -159,17 +165,26 @@ const config: Config = {
       style: "primary",
       title: "Windsurf Playbook",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
-        width: 128,
+        alt: "Windsurf Playbook Logo",
+        src: "https://genai.practitioner.help/img/logo.png",
+        // width: 128,
       },
       items: [
         {
           position: "left",
-          label: "Get Started",
-          to: "/docs/get-started",
+          label: "Learn",
+          to: "/docs/overview",
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        {
+          position: "left",
+          label: "Quiz",
+          to: "/quiz",
+        },
+        {
+          position: "right",
+          label: "About Slash",
+          to: "/about-slash",
+        },
         {
           href: "https://github.com/slashdigital/windsurf-playbook",
           label: "GitHub",
@@ -184,12 +199,12 @@ const config: Config = {
           title: "Windsurf Playbook",
           items: [
             {
-              label: "Get Started",
-              to: "/docs/get-started",
+              label: "Learn",
+              to: "/docs/overview",
             },
             {
-              label: "Blog",
-              to: "/blog",
+              label: "Quiz",
+              to: "/quiz",
             },
           ],
         },

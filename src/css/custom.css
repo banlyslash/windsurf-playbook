@@ -571,14 +571,14 @@
 
 /* Main content area - minimum height to push footer down (minus navbar and navigation) */
 main.docMainContainer_TBSr {
-  min-height: calc(100vh - 232px);
+  min-height: calc(100vh - 200px);
 }
 
 /* Alternative selector for main content */
 .main-wrapper {
-  min-height: calc(100vh - 232px);
+  min-height: calc(100vh - 200px);
 }
 
 article {
-  min-height: calc(100vh - 232px);
+  min-height: calc(100vh - 124px);
 }

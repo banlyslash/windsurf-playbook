@@ -7,6 +7,24 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.backLink:hover {
+  background-color: var(--ifm-color-primary-lightest);
+  text-decoration: none;
+  color: var(--ifm-color-primary-dark);
+}
+
 .quizTitle {
   margin-top: 0;
   margin-bottom: 1.5rem;
@@ -22,7 +40,8 @@
 .nameEntryPrompt {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  color: var(--ifm-color-emphasis-800);
+  color: var(--ifm-font-color-base);
+  font-weight: 500;
 }
 
 .nameEntryForm {
@@ -79,7 +98,7 @@
 .userName {
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--ifm-color-emphasis-800);
+  color: var(--ifm-font-color-base);
   margin-bottom: 1rem;
   text-align: center;
 }

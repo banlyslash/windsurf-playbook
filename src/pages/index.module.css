@@ -21,3 +21,22 @@
   align-items: center;
   justify-content: center;
 }
+
+.getStartedButton {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: white;
+  padding: 1rem 2rem;
+  min-height: 60px;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.getStartedButton:hover {
+  background-color: var(--ifm-color-primary-darker);
+  border-color: var(--ifm-color-primary-darker);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

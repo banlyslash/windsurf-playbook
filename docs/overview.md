@@ -171,7 +171,7 @@ This playbook is continuously evolving. Major updates and changes are documented
 
 ---
 
-## A Note from the Author
+## A Note from the Author Team
 
 > "AI-assisted development isn't about replacing developers—it's about amplifying human creativity and problem-solving. This playbook represents our collective journey in discovering how to work alongside AI effectively, maintaining our craft while embracing new possibilities.
 >

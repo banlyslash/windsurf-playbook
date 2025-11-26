@@ -66,24 +66,12 @@ const sidebars: SidebarsConfig = {
         "use-cases/prompt-engineering-for-coding",
       ],
     },
-
     "caution",
     "stuff-you-should-know",
     {
-      type: "category",
-      label: "Challenges",
-      items: [
-        "challenges/quiz-mcq", 
-        "challenges/quiz-mcq-medium"
-      ],
-    },
-    {
-      type: "category",
-      label: "Assessments",
-      items: [
-        "assessment/quiz-mcq",
-        "assessment/quiz-mcq-medium"
-      ],
+      type: "link",
+      label: "📝 Test Your Knowledge",
+      href: "/quiz",
     },
   ],
 };

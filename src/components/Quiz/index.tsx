@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 export interface QuizQuestion {
@@ -73,6 +74,9 @@ export default function Quiz({ questions, title = 'Quiz', requireName = false }:
 
   return (
     <div className={styles.quizContainer}>
+      <Link to="/quiz" className={styles.backLink}>
+        ← Back to Quiz Menu
+      </Link>
       <h2 className={styles.quizTitle}>{title}</h2>
       
       {requireName && !hasStarted ? (

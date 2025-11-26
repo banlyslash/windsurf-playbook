@@ -1,0 +1,186 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+:global(.quizPageWrapper) {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+:global(.quizPageWrapper) :global(.main-wrapper) {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+:global(.quizPageWrapper) :global(main) {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+:global(.quizPageWrapper) :global(.container) {
+  max-width: 100% !important;
+}
+
+.quizMain {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.quizSection {
+  padding: 4rem 2rem;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centeredContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.cardsRow {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.categoryCard {
+  flex: 0 1 450px;
+  max-width: 450px;
+  min-width: 300px;
+}
+
+.categoryCard .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 2px solid var(--ifm-color-emphasis-200);
+}
+
+.categoryCard .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--ifm-color-primary);
+}
+
+.categoryCard .card__header {
+  text-align: center;
+  padding: 2rem 1.5rem 1.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.categoryCard .card__body {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.optionButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border-width: 2px;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border-color: var(--ifm-color-primary);
+}
+
+.optionButton:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+  color: white;
+}
+
+.difficultyLabel {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: white;
+}
+
+.questionCount {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  font-weight: 400;
+  color: white;
+}
+
+@media screen and (max-width: 996px) {
+  .cardsRow {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .categoryCard {
+    max-width: 100%;
+  }
+
+  .quizSection {
+    padding: 3rem 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cardIcon {
+    font-size: 3rem;
+  }
+
+  .optionButton {
+    padding: 1rem 1.25rem;
+  }
+}

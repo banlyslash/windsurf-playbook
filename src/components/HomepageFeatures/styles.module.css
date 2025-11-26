@@ -9,3 +9,11 @@
   height: 200px;
   width: 200px;
 }
+
+:global(.feature-card) {
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+:global([data-theme='dark']) :global(.feature-card) {
+  border-color: var(--ifm-color-emphasis-200);
+}

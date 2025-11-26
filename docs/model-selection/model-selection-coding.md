@@ -6,6 +6,11 @@ image: "/img/docusaurus-social-card.jpg"
 
 # For Coding
 
+:::info Document Information
+**Last Updated:** October 2025  
+**Note:** AI models and their capabilities evolve rapidly. This information reflects the state of available models at the time of writing. Always check for the latest model releases and benchmarks.
+:::
+
 Use public benchmarks as directional signal; your repo, tools, and constraints matter. Prefer real‑world evals (SWE‑bench Verified, LiveCodeBench) over narrow function tests.
 
 ---
