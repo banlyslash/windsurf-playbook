@@ -193,12 +193,12 @@ Your contributions help make this resource better for everyone.
 
 #### How to Contribute
 
-1. **Fork the Repository**: Start by forking the [Windsurf Playbook repository](https://github.com/slash/windsurf-playbook)
+1. **Fork the Repository**: Start by forking the [Windsurf Playbook repository](https://github.com/slashdigital/windsurf-playbook)
 2. **Make Your Changes**: Add content, fix issues, or improve existing documentation
 3. **Submit a Pull Request**: Share your improvements with the community
 4. **Engage in Discussion**: Participate in reviews and refinements
 
-For detailed contribution guidelines, please see our [CONTRIBUTING.md](https://github.com/slash/windsurf-playbook/blob/main/CONTRIBUTING.md) file.
+For detailed contribution guidelines, please see our [CONTRIBUTING.md](https://github.com/slashdigital/windsurf-playbook/blob/main/CONTRIBUTING.md) file.
 
 ### License & Usage
 
@@ -218,21 +218,6 @@ Windsurf Playbook by Banly Tong and Contributors
 https://windsurf-playbook.slash.co
 Licensed under MIT License
 ```
-
-### Stay Connected
-
-#### Feedback & Support
-
-- **Issues & Suggestions**: [GitHub Issues](https://github.com/slash/windsurf-playbook/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/slash/windsurf-playbook/discussions)
-- **Updates**: Follow the repository for the latest changes
-
-#### Version History
-
-This playbook is continuously evolving. Major updates and changes are documented in our [changelog](https://github.com/slash/windsurf-playbook/blob/main/CHANGELOG.md).
-
-**Current Version**: 1.0.0  
-**Last Updated**: November 2025
 
 ---
 
