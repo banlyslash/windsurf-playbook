@@ -1,24 +1,7 @@
----
-description: "Test your knowledge of Windsurf basics with this interactive quiz. 3-5 easy questions covering key concepts and features."
-keywords: ["quiz", "Windsurf", "basic concepts", "knowledge test", "learning", "assessment", "Cascade"]
-image: "/img/docusaurus-social-card.jpg"
----
+import type { QuizQuestion } from './types';
 
-# Assessment 1: Basic Concepts
-
-Each topic has 3–5 easy questions to reflect on key concepts. Test your knowledge with this interactive assessment!
-
-<ThreadedQuiz 
-  title="Windsurf Basic Concepts Assessment" 
-  showCategories={true}
-  randomize={true}
-  maxQuestions={36}
-  hideCheckAnswer={true}
-  autoAdvance={true}
-  autoAdvanceDelay={600}
-  requireName={true}
-  questions={[
-    // Tab Features
+export const basicConceptsAssessmentQuestions: QuizQuestion[] = [
+// Tab Features
     {
       category: "Tab Features",
       question: "Which setting helps you move the cursor to the next logical edit location?",
@@ -638,6 +621,77 @@ Each topic has 3–5 easy questions to reflect on key concepts. Test your knowle
       ],
       correctAnswer: 1,
       explanation: "You can drag and drop files or folders to @-mention them, which is easier than typing mentions manually."
+    },
+    {
+      category: "Best Practices",
+      question: "What happens to Cascade's memory over time?",
+      options: [
+        "It remains perfectly intact",
+        "It fades, making early context blur over time",
+        "It gets automatically backed up",
+        "It improves with each conversation"
+      ],
+      correctAnswer: 1,
+      explanation: "Cascade's memory fades over time, making early context blur. It's recommended to ask Cascade to explain relevant content to verify its understanding before making intensive changes."
+    },
+    {
+      category: "Best Practices",
+      question: "What happens when you switch models in Cascade?",
+      options: [
+        "The new model inherits all context perfectly",
+        "Nothing changes, it's seamless",
+        "You may lose context as the new model starts fresh without full history",
+        "The previous model continues running in the background"
+      ],
+      correctAnswer: 2,
+      explanation: "Switching models can cause context loss. The new model won't inherit the full conversation history or context, so you may need to restate key information."
+    },
+    {
+      category: "Best Practices",
+      question: "How can you export a conversation with Cascade?",
+      options: [
+        "Using the 'Download Trajectory' in Cascade action menu",
+        "Copy and paste manually",
+        "Using the export API",
+        "Conversations cannot be exported"
+      ],
+      correctAnswer: 0,
+      explanation: "You can export conversations as markdown using the 'Download Trajectory' option in the Cascade action menu."
+    },
+    {
+      category: "Best Practices",
+      question: "What can happen when using multiple Windsurf windows?",
+      options: [
+        "It speeds up your workflow",
+        "It provides better context",
+        "It causes unexpected behavior like inability to edit files",
+        "It automatically synchronizes your work"
+      ],
+      correctAnswer: 2,
+      explanation: "Using multiple Windsurf Windows is not a productive experience. It can confuse Windsurf and cause unexpected behavior such as being unable to edit files."
+    },
+    {
+      category: "Best Practices",
+      question: "What should you consider when selecting a model in Windsurf?",
+      options: [
+        "Always use the most expensive model",
+        "Choose wisely as expensive models can drain credits quickly",
+        "Model selection doesn't affect performance",
+        "Models are automatically selected based on the task"
+      ],
+      correctAnswer: 1,
+      explanation: "You should choose models wisely as expensive models can drain credits quickly."
+    },
+    {
+      category: "Best Practices",
+      question: "What happens during local indexing for a new workspace?",
+      options: [
+        "It's instant and seamless",
+        "It can cause initial slowness for 5-10 minutes",
+        "It requires manual configuration",
+        "It only indexes open files"
+      ],
+      correctAnswer: 1,
+      explanation: "Local indexing for a new workspace can lead to initial slowness, as Windsurf requires approximately 5 to 10 minutes to index the entire codebase before you can fully utilize its features."
     }
-  ]} 
-/>
+];

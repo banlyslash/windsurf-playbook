@@ -1,20 +1,7 @@
----
-description: "Challenge yourself with advanced Windsurf scenarios. Test deeper understanding with scenario-style questions and real-world use cases."
-keywords: ["quiz", "advanced scenarios", "Windsurf", "challenge", "learning", "assessment", "Cascade", "real-world"]
-image: "/img/docusaurus-social-card.jpg"
----
+import type { QuizQuestion } from './types';
 
-# Quiz 2: Advanced Scenarios
-
-Scenario-style questions to check deeper understanding. Test your knowledge with these more challenging scenarios!
-
-<ThreadedQuiz 
-  title="Windsurf Advanced Scenarios Quiz" 
-  showCategories={true}
-  randomize={true}
-  maxQuestions={36}
-  questions={[
-    // Tab Features
+export const advancedScenariosAssessmentQuestions: QuizQuestion[] = [
+// Tab Features
     {
       category: "Tab Features",
       question: "You accept a multi-line suggestion, but imports weren't updated. What's the most precise next step?",
@@ -639,5 +626,4 @@ Scenario-style questions to check deeper understanding. Test your knowledge with
       correctAnswer: 1,
       explanation: "In the Review phase, conduct a self-review with Windsurf to check code quality, test coverage, and documentation completeness before creating a pull request."
     }
-  ]} 
-/>
+];

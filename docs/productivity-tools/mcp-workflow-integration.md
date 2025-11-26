@@ -695,3 +695,4 @@ For changes spanning multiple repos:
 - [MCP Example Servers](https://modelcontextprotocol.io/examples)
 - [MCP Server Catalog](https://opentools.com/)
 - [Conventional Commits](https://www.conventionalcommits.org/) - Commit message format
+- [MCP Workflow Integration Video Tutorial](https://www.youtube.com/watch?v=HQJ3A8p6JBY) - Video walkthrough of MCP workflow integration
