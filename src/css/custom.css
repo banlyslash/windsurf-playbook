@@ -300,7 +300,7 @@
 
 /* Navbar gradient background */
 .navbar {
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-secondary) 100%);
+  background: linear-gradient(135deg, var(--ifm-color-primary-lighter) 0%, var(--ifm-color-secondary) 100%);
   box-shadow: var(--ifm-global-shadow-md);
 }
 
@@ -317,7 +317,7 @@
 
 /* Dark mode navbar adjustments */
 [data-theme='dark'] .navbar {
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-secondary) 100%);
+  background: linear-gradient(135deg, var(--ifm-color-primary-lighter) 0%, var(--ifm-color-secondary) 100%);
 }
 
 /* Homepage header gradient background */

@@ -7,7 +7,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Windsurf Playbook",
   tagline: "The AI-Powered Developer Guideline",
-  favicon: "https://genai.practitioner.help/img/favicon.png",
+  favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -166,7 +166,7 @@ const config: Config = {
       title: "Windsurf Playbook",
       logo: {
         alt: "Windsurf Playbook Logo",
-        src: "https://genai.practitioner.help/img/logo.png",
+        src: "img/logo.png",
         // width: 128,
       },
       items: [
