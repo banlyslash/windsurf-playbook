@@ -76,6 +76,11 @@ const sidebars: SidebarsConfig = {
       label: "📝 Test Your Knowledge",
       href: "/quiz",
     },
+    {
+      type: "link",
+      label: "💬 Share Your Feedback",
+      href: "https://github.com/slashdigital/windsurf-playbook/issues/new",
+    },
   ],
 };
 
